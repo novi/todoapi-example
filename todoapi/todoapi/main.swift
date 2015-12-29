@@ -32,23 +32,24 @@ struct Row {
     }
 }
 
-struct ServerResponder: ResponderType {
-    func respond(request: Request) -> Response {
-        do {
-            let rows:[Row.MathResult] = try pool.execute{ conn in
-                try conn.query("SELECT 1 + 3 as val;")
-            }
-            if rows.count != 1 {
-                NSLog("%@", "row count invalid \(rows.count)")
-            }
-            return Response(status: .OK, body: "\(rows.count) - \(rows[0].val)")
-        } catch (let e) {
-             NSLog("%@", "\(e)")
-            return Response(status: .InternalServerError)
+let router = Router { router in
+    router.get("/test") { request in
+        let rows:[Row.MathResult] = try pool.execute{ conn in
+            try conn.query("SELECT 1 + 3 as val;")
         }
+        if rows.count != 1 {
+            NSLog("%@", "row count invalid \(rows.count)")
+        }
+        return Response(status: .OK, body: "\(rows.count) - \(rows[0].val)")
+    }
+    
+    router.get("/test/:id") { request in
+        guard let id = Int(request.parameters["id"] ?? "") else {
+            return Response(status: .BadRequest)
+        }
+        return Response(status: .OK, body: "given id: \(id)")
     }
 }
 
-let responder = ServerResponder()
-let server = Server(port: 3000, responder: responder)
+let server = Server(port: 3000, responder: router)
 server.start()

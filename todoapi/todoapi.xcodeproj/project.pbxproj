@@ -11,6 +11,7 @@
 		5299635A1C32B10C007D30D6 /* Epoch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529963411C32B0CC007D30D6 /* Epoch.framework */; };
 		5299635B1C32B10C007D30D6 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529963531C32B0E6007D30D6 /* MySQL.framework */; };
 		5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299635E1C32B1F2007D30D6 /* Constants.swift */; };
+		5299636A1C32C9F7007D30D6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529963691C32C9F7007D30D6 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		529963391C32B0CC007D30D6 /* Epoch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Epoch.xcodeproj; path = ../External/Epoch/Xcode/Epoch.xcodeproj; sourceTree = "<group>"; };
 		5299634D1C32B0E5007D30D6 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "/Users/ito/SwiftProjs/todoapi/External/Epoch/Xcode/../../MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<absolute>"; };
 		5299635E1C32B1F2007D30D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		529963691C32C9F7007D30D6 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = ../External/Router/Sources/Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		529963191C32AFE1007D30D6 = {
 			isa = PBXGroup;
 			children = (
+				529963681C32C9EC007D30D6 /* Router */,
 				529963381C32B088007D30D6 /* External */,
 				529963231C32AFE1007D30D6 /* todoapi */,
 				5299632E1C32AFE1007D30D6 /* todoapiTests */,
@@ -158,6 +161,14 @@
 				529963551C32B0E6007D30D6 /* MySQLTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		529963681C32C9EC007D30D6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				529963691C32C9F7007D30D6 /* Router.swift */,
+			);
+			name = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				529963251C32AFE1007D30D6 /* main.swift in Sources */,
+				5299636A1C32C9F7007D30D6 /* Router.swift in Sources */,
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +484,7 @@
 				529963341C32AFE1007D30D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		529963351C32AFE1007D30D6 /* Build configuration list for PBXNativeTarget "todoapiTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +493,7 @@
 				529963371C32AFE1007D30D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
