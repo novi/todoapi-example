@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		529963251C32AFE1007D30D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529963241C32AFE1007D30D6 /* main.swift */; };
+		5299635A1C32B10C007D30D6 /* Epoch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529963411C32B0CC007D30D6 /* Epoch.framework */; };
+		5299635B1C32B10C007D30D6 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529963531C32B0E6007D30D6 /* MySQL.framework */; };
+		5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299635E1C32B1F2007D30D6 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5299632C1C32AFE1007D30D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5299631A1C32AFE1007D30D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 529963201C32AFE1007D30D6;
+			remoteInfo = todoapi;
+		};
+		529963401C32B0CC007D30D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529963391C32B0CC007D30D6 /* Epoch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B024A8841C2F319B00FBB44A;
+			remoteInfo = Epoch;
+		};
+		529963421C32B0CC007D30D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529963391C32B0CC007D30D6 /* Epoch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B024A88E1C2F319B00FBB44A;
+			remoteInfo = EpochTests;
+		};
+		529963521C32B0E6007D30D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5299634D1C32B0E5007D30D6 /* MySQL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 529215871BDB8CD6009B031A;
+			remoteInfo = MySQL;
+		};
+		529963541C32B0E6007D30D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5299634D1C32B0E5007D30D6 /* MySQL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 529215911BDB8CD6009B031A;
+			remoteInfo = MySQLTests;
+		};
+		529963561C32B105007D30D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5299634D1C32B0E5007D30D6 /* MySQL.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 529215861BDB8CD6009B031A;
+			remoteInfo = MySQL;
+		};
+		529963581C32B107007D30D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529963391C32B0CC007D30D6 /* Epoch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B024A8831C2F319B00FBB44A;
+			remoteInfo = Epoch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		529963211C32AFE1007D30D6 /* todoapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		529963241C32AFE1007D30D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		529963261C32AFE1007D30D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5299632B1C32AFE1007D30D6 /* todoapiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todoapiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5299632F1C32AFE1007D30D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529963391C32B0CC007D30D6 /* Epoch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Epoch.xcodeproj; path = ../External/Epoch/Xcode/Epoch.xcodeproj; sourceTree = "<group>"; };
+		5299634D1C32B0E5007D30D6 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "/Users/ito/SwiftProjs/todoapi/External/Epoch/Xcode/../../MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<absolute>"; };
+		5299635E1C32B1F2007D30D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5299631F1C32AFE1007D30D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5299635A1C32B10C007D30D6 /* Epoch.framework in Frameworks */,
+				5299635B1C32B10C007D30D6 /* MySQL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529963281C32AFE1007D30D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		529963191C32AFE1007D30D6 = {
+			isa = PBXGroup;
+			children = (
+				529963381C32B088007D30D6 /* External */,
+				529963231C32AFE1007D30D6 /* todoapi */,
+				5299632E1C32AFE1007D30D6 /* todoapiTests */,
+				529963221C32AFE1007D30D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		529963221C32AFE1007D30D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				529963211C32AFE1007D30D6 /* todoapi.app */,
+				5299632B1C32AFE1007D30D6 /* todoapiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		529963231C32AFE1007D30D6 /* todoapi */ = {
+			isa = PBXGroup;
+			children = (
+				5299635E1C32B1F2007D30D6 /* Constants.swift */,
+				529963241C32AFE1007D30D6 /* main.swift */,
+				529963261C32AFE1007D30D6 /* Info.plist */,
+			);
+			path = todoapi;
+			sourceTree = "<group>";
+		};
+		5299632E1C32AFE1007D30D6 /* todoapiTests */ = {
+			isa = PBXGroup;
+			children = (
+				5299632F1C32AFE1007D30D6 /* Info.plist */,
+			);
+			path = todoapiTests;
+			sourceTree = "<group>";
+		};
+		529963381C32B088007D30D6 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				5299634D1C32B0E5007D30D6 /* MySQL.xcodeproj */,
+				529963391C32B0CC007D30D6 /* Epoch.xcodeproj */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		5299633A1C32B0CC007D30D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				529963411C32B0CC007D30D6 /* Epoch.framework */,
+				529963431C32B0CC007D30D6 /* EpochTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5299634E1C32B0E5007D30D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				529963531C32B0E6007D30D6 /* MySQL.framework */,
+				529963551C32B0E6007D30D6 /* MySQLTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		529963201C32AFE1007D30D6 /* todoapi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 529963321C32AFE1007D30D6 /* Build configuration list for PBXNativeTarget "todoapi" */;
+			buildPhases = (
+				5299631E1C32AFE1007D30D6 /* Sources */,
+				5299631F1C32AFE1007D30D6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				529963591C32B107007D30D6 /* PBXTargetDependency */,
+				529963571C32B105007D30D6 /* PBXTargetDependency */,
+			);
+			name = todoapi;
+			productName = todoapi;
+			productReference = 529963211C32AFE1007D30D6 /* todoapi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5299632A1C32AFE1007D30D6 /* todoapiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 529963351C32AFE1007D30D6 /* Build configuration list for PBXNativeTarget "todoapiTests" */;
+			buildPhases = (
+				529963271C32AFE1007D30D6 /* Sources */,
+				529963281C32AFE1007D30D6 /* Frameworks */,
+				529963291C32AFE1007D30D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5299632D1C32AFE1007D30D6 /* PBXTargetDependency */,
+			);
+			name = todoapiTests;
+			productName = todoapiTests;
+			productReference = 5299632B1C32AFE1007D30D6 /* todoapiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5299631A1C32AFE1007D30D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Yusuke Ito";
+				TargetAttributes = {
+					529963201C32AFE1007D30D6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					5299632A1C32AFE1007D30D6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 529963201C32AFE1007D30D6;
+					};
+				};
+			};
+			buildConfigurationList = 5299631D1C32AFE1007D30D6 /* Build configuration list for PBXProject "todoapi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 529963191C32AFE1007D30D6;
+			productRefGroup = 529963221C32AFE1007D30D6 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5299633A1C32B0CC007D30D6 /* Products */;
+					ProjectRef = 529963391C32B0CC007D30D6 /* Epoch.xcodeproj */;
+				},
+				{
+					ProductGroup = 5299634E1C32B0E5007D30D6 /* Products */;
+					ProjectRef = 5299634D1C32B0E5007D30D6 /* MySQL.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				529963201C32AFE1007D30D6 /* todoapi */,
+				5299632A1C32AFE1007D30D6 /* todoapiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		529963411C32B0CC007D30D6 /* Epoch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Epoch.framework;
+			remoteRef = 529963401C32B0CC007D30D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		529963431C32B0CC007D30D6 /* EpochTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EpochTests.xctest;
+			remoteRef = 529963421C32B0CC007D30D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		529963531C32B0E6007D30D6 /* MySQL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MySQL.framework;
+			remoteRef = 529963521C32B0E6007D30D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		529963551C32B0E6007D30D6 /* MySQLTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MySQLTests.xctest;
+			remoteRef = 529963541C32B0E6007D30D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		529963291C32AFE1007D30D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5299631E1C32AFE1007D30D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529963251C32AFE1007D30D6 /* main.swift in Sources */,
+				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529963271C32AFE1007D30D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5299632D1C32AFE1007D30D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 529963201C32AFE1007D30D6 /* todoapi */;
+			targetProxy = 5299632C1C32AFE1007D30D6 /* PBXContainerItemProxy */;
+		};
+		529963571C32B105007D30D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MySQL;
+			targetProxy = 529963561C32B105007D30D6 /* PBXContainerItemProxy */;
+		};
+		529963591C32B107007D30D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Epoch;
+			targetProxy = 529963581C32B107007D30D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		529963301C32AFE1007D30D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		529963311C32AFE1007D30D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		529963331C32AFE1007D30D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = todoapi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.todoapi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		529963341C32AFE1007D30D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 3;
+				INFOPLIST_FILE = todoapi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.todoapi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		529963361C32AFE1007D30D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = todoapiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.todoapiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoapi.app/Contents/MacOS/todoapi";
+			};
+			name = Debug;
+		};
+		529963371C32AFE1007D30D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = todoapiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.todoapiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/todoapi.app/Contents/MacOS/todoapi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5299631D1C32AFE1007D30D6 /* Build configuration list for PBXProject "todoapi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529963301C32AFE1007D30D6 /* Debug */,
+				529963311C32AFE1007D30D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		529963321C32AFE1007D30D6 /* Build configuration list for PBXNativeTarget "todoapi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529963331C32AFE1007D30D6 /* Debug */,
+				529963341C32AFE1007D30D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		529963351C32AFE1007D30D6 /* Build configuration list for PBXNativeTarget "todoapiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529963361C32AFE1007D30D6 /* Debug */,
+				529963371C32AFE1007D30D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5299631A1C32AFE1007D30D6 /* Project object */;
+}

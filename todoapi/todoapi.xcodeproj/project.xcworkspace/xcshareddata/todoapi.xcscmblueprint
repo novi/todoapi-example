@@ -1,0 +1,57 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1E341D92E29B00380C7F10E3866962C9D13CE7F8" : 0,
+    "900D198C3FB851E8F8E01B008846A319DD357A70" : 0,
+    "E183E19EBC37EFDFA20734294B0253734CDD4430" : 0,
+    "73C60CD22D0E3848AB6C79BB2497308B2CBE4A18" : 0,
+    "D4199CF4A45E212E54A4CEE7E34326E0BC446862" : 0,
+    "57932305D7AF3390B1D4C8A3D4D1FCFFE771843F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "72FFE2B8-EEC2-485E-8BE3-BDF38EBC4D1E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1E341D92E29B00380C7F10E3866962C9D13CE7F8" : "todoapi\/External\/Epoch\/HTTPParser\/HTTP\/Core\/",
+    "900D198C3FB851E8F8E01B008846A319DD357A70" : "todoapi\/External\/Epoch\/Venice\/",
+    "E183E19EBC37EFDFA20734294B0253734CDD4430" : "todoapi\/External\/Epoch\/",
+    "73C60CD22D0E3848AB6C79BB2497308B2CBE4A18" : "todoapi\/External\/MySQL\/",
+    "D4199CF4A45E212E54A4CEE7E34326E0BC446862" : "todoapi\/External\/Epoch\/HTTPParser\/HTTP\/",
+    "57932305D7AF3390B1D4C8A3D4D1FCFFE771843F" : "todoapi\/External\/Epoch\/HTTPParser\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "todoapi",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "todoapi\/todoapi.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zewo\/Core",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1E341D92E29B00380C7F10E3866962C9D13CE7F8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zewo\/HTTPParser",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "57932305D7AF3390B1D4C8A3D4D1FCFFE771843F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/novi\/mysql-swift",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "73C60CD22D0E3848AB6C79BB2497308B2CBE4A18"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zewo\/Venice",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "900D198C3FB851E8F8E01B008846A319DD357A70"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zewo\/HTTP",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D4199CF4A45E212E54A4CEE7E34326E0BC446862"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zewo\/Epoch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E183E19EBC37EFDFA20734294B0253734CDD4430"
+    }
+  ]
+}
