@@ -33,19 +33,14 @@ struct Row {
 }
 
 struct ServerResponder: ResponderType {
-    func respond(request: Request) -> Response {
-        do {
-            let rows:[Row.MathResult] = try pool.execute{ conn in
-                try conn.query("SELECT 1 + 3 as val;")
-            }
-            if rows.count != 1 {
-                NSLog("%@", "row count invalid \(rows.count)")
-            }
-            return Response(status: .OK, body: "\(rows.count) - \(rows[0].val)")
-        } catch (let e) {
-             NSLog("%@", "\(e)")
-            return Response(status: .InternalServerError)
+    func respond(request: Request) throws -> Response {
+        let rows:[Row.MathResult] = try pool.execute{ conn in
+            try conn.query("SELECT 1 + 3 as val;")
         }
+        if rows.count != 1 {
+            NSLog("%@", "row count invalid \(rows.count)")
+        }
+        return Response(status: .OK, body: "\(rows.count) - \(rows[0].val)")
     }
 }
 
