@@ -4,6 +4,7 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "900D198C3FB851E8F8E01B008846A319DD357A70" : 0,
     "E183E19EBC37EFDFA20734294B0253734CDD4430" : 0,
     "0E72FB62C65BE0FC096627B543ED3D5BE63A4380" : 0,
     "57932305D7AF3390B1D4C8A3D4D1FCFFE771843F" : 0,
@@ -11,10 +12,11 @@
     "D4199CF4A45E212E54A4CEE7E34326E0BC446862" : 0,
     "1E341D92E29B00380C7F10E3866962C9D13CE7F8" : 0,
     "73C60CD22D0E3848AB6C79BB2497308B2CBE4A18" : 0,
-    "900D198C3FB851E8F8E01B008846A319DD357A70" : 0
+    "0FFB39A8C1673271B3CF9CE95BF4AD2CC29C3EC9" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "72FFE2B8-EEC2-485E-8BE3-BDF38EBC4D1E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "900D198C3FB851E8F8E01B008846A319DD357A70" : "todoapi\/External\/Epoch\/Venice\/",
     "E183E19EBC37EFDFA20734294B0253734CDD4430" : "todoapi\/External\/Epoch\/",
     "0E72FB62C65BE0FC096627B543ED3D5BE63A4380" : "todoapi\/",
     "57932305D7AF3390B1D4C8A3D4D1FCFFE771843F" : "todoapi\/External\/Epoch\/HTTPParser\/",
@@ -22,7 +24,7 @@
     "D4199CF4A45E212E54A4CEE7E34326E0BC446862" : "todoapi\/External\/Epoch\/HTTPParser\/HTTP\/",
     "1E341D92E29B00380C7F10E3866962C9D13CE7F8" : "todoapi\/External\/Epoch\/HTTPParser\/HTTP\/Core\/",
     "73C60CD22D0E3848AB6C79BB2497308B2CBE4A18" : "todoapi\/External\/MySQL\/",
-    "900D198C3FB851E8F8E01B008846A319DD357A70" : "todoapi\/External\/Epoch\/Venice\/"
+    "0FFB39A8C1673271B3CF9CE95BF4AD2CC29C3EC9" : "todoapi\/External\/Middleware\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "todoapi",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -32,6 +34,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:novi\/todoapi-example.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E72FB62C65BE0FC096627B543ED3D5BE63A4380"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zewo\/Middleware.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0FFB39A8C1673271B3CF9CE95BF4AD2CC29C3EC9"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Zewo\/Core",

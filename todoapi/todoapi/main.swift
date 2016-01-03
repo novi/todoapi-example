@@ -1,9 +1,11 @@
 
 import MySQL
 import HTTP
+import Core
 import Epoch
-import CHTTPParser
-import CLibvenice
+//import CHTTPParser
+//import CLibvenice
+import Kunugi
 
 // Provide DB options as following in Constants.swift
 /*
@@ -19,37 +21,24 @@ struct DBOptions: ConnectionOption {
 */
 
 
-let pool = ConnectionPool(options: DBOptions())
+let app = App()
 
-struct Row {
-    struct MathResult: QueryRowResultType {
-        let val: Int
-        static func decodeRow(r: MySQL.QueryRowResult) throws -> MathResult {
-            return try build(MathResult.init)(
-                r <| 0
-            )
-        }
-    }
-}
+app.use(Logger())
 
-let router = Router { router in
-    router.get("/test") { request in
-        let rows:[Row.MathResult] = try pool.execute{ conn in
-            try conn.query("SELECT 1 + 3 as val;")
-        }
-        if rows.count != 1 {
-            NSLog("%@", "row count invalid \(rows.count)")
-        }
-        return Response(status: .OK, body: "\(rows.count) - \(rows[0].val)")
-    }
-    
-    router.get("/test/:id") { request in
-        guard let id = Int(request.parameters["id"] ?? "") else {
-            return Response(status: .BadRequest)
-        }
-        return Response(status: .OK, body: "given id: \(id)")
-    }
-}
+app.use(BodyParser())
 
-let server = Server(port: 3000, responder: router)
+app.use(Mount("/user", compose(
+    Route("/sum", SumController()),
+    AuthUser(authAs: "user") >>> UserController()
+    )
+))
+app.use(Mount("/private", compose(
+    Route("/something", PrivateController(name: "something") ),
+    Route("/:id", AuthUser(authAs: "private") >>> PrivateController(name: "by id"))
+    ) ))
+
+
+let server = Server(port: 3000, responder: app.responder)
+print("listening...")
 server.start()
+
