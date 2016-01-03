@@ -4,9 +4,3 @@
 [submodule "External/MySQL"]
 	path = External/MySQL
 	url = https://github.com/novi/mysql-swift
-[submodule "External/Router"]
-	path = External/Router
-	url = https://github.com/Zewo/Router.git
-[submodule "External/Middleware"]
-	path = External/Middleware
-	url = https://github.com/Zewo/Middleware.git
