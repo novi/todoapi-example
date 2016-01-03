@@ -14,6 +14,6 @@ struct Logger: WrapMiddleware, AnyRequestHandlable {
         print("logger before \(ctx)")
         try yieldNext()
         let t2 = CFAbsoluteTimeGetCurrent()
-        print("logger after \(ctx),\n\(ctx.request.method) \(ctx.request.uri.path ?? "") \(t2-t1)ms")
+        print("logger after \(ctx),\n\(ctx.request.method) \(ctx.request.uri.path ?? "") \(t2-t1)s")
     }
 }

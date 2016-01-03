@@ -37,9 +37,9 @@ class App: AppType {
         middleware.append(m)
     }
     func createContext(request: Request) throws -> ContextBox {
-        let ctx = Context(request)
-        try ctx.set(DBContext(pool: pool))
-        return ctx
+        let box = Context(request)
+        try box.set(DBContext(pool: pool))
+        return box
     }
     
     func catchError(e: ErrorType) {
