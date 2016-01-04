@@ -7,6 +7,7 @@
 //
 
 import Kunugi
+import CoreFoundation
 
 struct Logger: WrapMiddleware, AnyRequestHandlable {
     func handle(ctx: ContextBox, @noescape yieldNext: () throws -> Void) throws {
