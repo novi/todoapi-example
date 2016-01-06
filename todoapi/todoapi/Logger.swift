@@ -9,7 +9,7 @@
 import Kunugi
 import CoreFoundation
 
-struct Logger: WrapMiddleware, AnyRequestHandlable {
+struct Logger: WrapMiddleware, AnyRequestHandleable {
     func handle(ctx: ContextBox, @noescape yieldNext: () throws -> Void) throws {
         let t1 = CFAbsoluteTimeGetCurrent()
         print("logger before \(ctx)")

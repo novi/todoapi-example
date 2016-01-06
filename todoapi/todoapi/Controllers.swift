@@ -10,7 +10,7 @@ import Kunugi
 import HTTP
 import MySQL
 
-struct PrivateController: ControllerMiddleware, AnyRequestHandlable {
+struct PrivateController: ControllerMiddleware, AnyRequestHandleable {
     let name: String
     func get(ctx: ContextBox) throws -> MiddlewareResult {
         return .Respond(Response(status: .OK, body: "private get \(name) \(ctx.request.parameters)"))
@@ -21,7 +21,7 @@ struct PrivateController: ControllerMiddleware, AnyRequestHandlable {
 }
 
 
-struct UserController: ControllerMiddleware, AnyRequestHandlable {
+struct UserController: ControllerMiddleware, AnyRequestHandleable {
     func get(ctx: ContextBox) throws -> MiddlewareResult {
         let user = try ctx.get() as UserAuthenticated
         return .Respond(Response(status: .OK, body: "user is authenticated as \(user.userType)"))
@@ -33,22 +33,21 @@ struct UserController: ControllerMiddleware, AnyRequestHandlable {
     }
 }
 
-struct SumController: ControllerMiddleware, AnyRequestHandlable {
+struct SumController: ControllerMiddleware, AnyRequestHandleable {
     func post(ctx: ContextBox) throws -> MiddlewareResult {
-        let body = (try ctx.get() as RequestBodyContext).body
-        guard let a = body["a"]?.intValue, let b = body["b"]?.intValue else {
+        let ctx = ctx as! Context
+        guard let a = ctx.body["a"]?.intValue, let b = ctx.body["b"]?.intValue else {
             return .Respond(Response(status: .BadRequest))
         }
         return .Respond(Response(status: .OK, body: "\(a) + \(b) is \(a+b)"))
     }
     // calc using mysql
     func put(ctx: ContextBox) throws -> MiddlewareResult {
-        let body = (try ctx.get() as RequestBodyContext).body
-        guard let a = body["a"]?.intValue, let b = body["b"]?.intValue else {
+        let ctx = ctx as! Context
+        guard let a = ctx.body["a"]?.intValue, let b = ctx.body["b"]?.intValue else {
             return .Respond(Response(status: .BadRequest))
         }
-        let pool = (try ctx.get() as DBContext).pool
-        let rows:[Row.MathResult] = try pool.execute{ conn in
+        let rows:[Row.MathResult] = try ctx.pool.execute{ conn in
             try conn.query("SELECT ? + ? as val;", [a, b])
         }
         let val = rows[0]

@@ -13,7 +13,7 @@ struct UserAuthenticated: ContextType {
     let userType: String
 }
 
-struct AuthUser: MiddlewareType, AnyRequestHandlable {
+struct AuthUser: MiddlewareType, AnyRequestHandleable {
     let authAs: String
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
         print("auth check \(authAs)")

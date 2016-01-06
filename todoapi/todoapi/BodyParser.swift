@@ -10,18 +10,24 @@ import Kunugi
 import Core
 
 
-protocol JSONBodyContext {
-    var body: JSON { get }
-}
-
-struct RequestBodyContext: JSONBodyContext, ContextType {
+struct RequestBodyContext: ContextType {
     let body: JSON
 }
 
-struct BodyParser: MiddlewareType, AnyRequestHandlable {
+struct BodyParser: MiddlewareType, AnyRequestHandleable {
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
         let body = try? JSONParser.parse(ctx.request.body)
         try ctx.set(RequestBodyContext(body: body ?? JSON.from([:])))
         return .Next
+    }
+}
+
+extension Context {
+    var body: JSON {
+        do {
+            return (try self.get() as RequestBodyContext).body
+        } catch {
+            fatalError("the context requires body parser")
+        }
     }
 }

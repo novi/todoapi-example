@@ -13,17 +13,15 @@ import MySQL
 class Context: ContextBox {
     var context: [ContextType] = []
     var request: Request
-    init(_ request: Request) {
+    let pool: ConnectionPool
+    init(request: Request, pool: ConnectionPool) {
         self.request = request
+        self.pool = pool
     }
 }
 
-struct DBContext: ContextType {
-    let pool: ConnectionPool
-}
-
 class App: AppType {
-    typealias C = Context
+    
     let pool = ConnectionPool(options: DBOptions())
     
     var wrap: [WrapMiddleware] = []
@@ -36,10 +34,9 @@ class App: AppType {
     func use(m: MiddlewareType) {
         middleware.append(m)
     }
+    
     func createContext(request: Request) throws -> ContextBox {
-        let box = Context(request)
-        try box.set(DBContext(pool: pool))
-        return box
+        return Context(request: request, pool: pool)
     }
     
     func catchError(e: ErrorType) {
