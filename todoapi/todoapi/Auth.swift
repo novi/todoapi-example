@@ -18,7 +18,7 @@ struct AuthUser: MiddlewareType, AnyRequestHandleable {
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
         print("auth check \(authAs)")
         if let xauth = ctx.request.headers["x-auth"] where xauth.hasPrefix(authAs) {
-            try ctx.set(UserAuthenticated(userType: xauth))
+            try ctx.put(UserAuthenticated(userType: xauth))
             return .Next
         }
         return .Respond(Response(status: .Forbidden))
