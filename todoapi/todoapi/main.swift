@@ -24,6 +24,7 @@ app.use(Logger())
 
 app.use(BodyParser())
 
+// Controller Style Handler
 // http --verbose POST localhost:3000/user/sum x-auth:uuuu a:=1 b:=2 -> 200 OK
 // http --verbose POST localhost:3000/user/sum x-auth:uuuu a:=1 -> Bad Request
 // http --verbose PUT localhost:3000/user/sum x-auth:uuuu a:=1 b:=2 (using MySQL)
@@ -37,6 +38,19 @@ app.use(Mount("/user", AuthUser(authAs: "user") >>> UserController()))
 // http --verbose POST localhost:3000/dev/user x-auth:user a:=1 b:=2 -> 200 OK
 // http --verbose POST localhost:3000/dev/user x-auth:uuuu a:=1 b:=2 -> Forbidden
 app.use( Mount("/dev", Mount("/user", AuthUser(authAs: "user") >>> UserController()) ))
+
+
+// Closure Style Handler
+let router = Router()
+router.get("/test") { ctx in
+    return .Respond(Response(status: .OK, body: "here is test"))
+}
+
+// http --verbose PUT localhost:3000/hello
+router.all("/hello") { ctx in
+    return .Respond(Response(status: .OK, body: "world as \(ctx.request.method)"))
+}
+app.use(router)
 
 // http --verbose POST localhost:3000/private/something x-auth:private a:=1 b:=2 -> 200 OK
 // http --verbose POST localhost:3000/private/something x-auth:pppp a:=1 b:=2 -> 200 OK
