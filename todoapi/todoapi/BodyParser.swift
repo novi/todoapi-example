@@ -14,9 +14,14 @@ struct RequestBodyContext: ContextType {
 
 struct BodyParser: MiddlewareType, AnyRequestHandleable {
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
-        let data = NSData(bytes: ctx.request.body, length: ctx.request.body.count)
-        let body = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
-        try ctx.put(RequestBodyContext(body: body ?? [:]))
+        let body: AnyObject
+        if ctx.request.body.count > 0 {
+            let data = NSData(bytes: ctx.request.body, length: ctx.request.body.count)
+            body = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) ?? [:]
+        } else {
+            body = [:]
+        }
+        try ctx.put(RequestBodyContext(body: body))
         return .Next
     }
 }
