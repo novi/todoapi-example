@@ -7,23 +7,22 @@
 //
 
 import Kunugi
-import Core
-
 
 struct RequestBodyContext: ContextType {
-    let body: JSON
+    let body: AnyObject
 }
 
 struct BodyParser: MiddlewareType, AnyRequestHandleable {
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
-        let body = try? JSONParser.parse(ctx.request.body)
-        try ctx.put(RequestBodyContext(body: body ?? JSON.from([:])))
+        let data = NSData(bytes: ctx.request.body, length: ctx.request.body.count)
+        let body = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
+        try ctx.put(RequestBodyContext(body: body ?? [:]))
         return .Next
     }
 }
 
 extension Context {
-    var body: JSON {
+    var body: AnyObject {
         do {
             return (try self.get() as RequestBodyContext).body
         } catch {

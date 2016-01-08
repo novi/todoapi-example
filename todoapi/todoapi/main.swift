@@ -1,10 +1,7 @@
 
 import MySQL
 import HTTP
-import Core
 import Epoch
-//import CHTTPParser
-//import CLibvenice
 import Kunugi
 
 // Provide DB options as following in Constants.swift
@@ -36,6 +33,10 @@ app.use(Mount("/user", Route("/sum", SumController())))
 // http --verbose POST localhost:3000/user x-auth:uuuu a:=1 b:=2 -> Forbidden
 app.use(Mount("/user", AuthUser(authAs: "user") >>> UserController()))
 
+// Nested Mount
+// http --verbose POST localhost:3000/dev/user x-auth:user a:=1 b:=2 -> 200 OK
+// http --verbose POST localhost:3000/dev/user x-auth:uuuu a:=1 b:=2 -> Forbidden
+app.use( Mount("/dev", Mount("/user", AuthUser(authAs: "user") >>> UserController()) ))
 
 // http --verbose POST localhost:3000/private/something x-auth:private a:=1 b:=2 -> 200 OK
 // http --verbose POST localhost:3000/private/something x-auth:pppp a:=1 b:=2 -> 200 OK
