@@ -18,6 +18,7 @@
 		529963251C32AFE1007D30D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529963241C32AFE1007D30D6 /* main.swift */; };
 		5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299635E1C32B1F2007D30D6 /* Constants.swift */; };
 		529CCF7F1C3F9CBD00084373 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529CCF7A1C3F9C4A00084373 /* MySQL.framework */; };
+		52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		5299632F1C32AFE1007D30D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5299635E1C32B1F2007D30D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../External/MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
+		52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				528A0E491C393898002AFC9A /* App.swift */,
 				528A0E4F1C393990002AFC9A /* Auth.swift */,
 				528A0E411C393843002AFC9A /* Logger.swift */,
+				52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */,
 				528A0E4D1C39396A002AFC9A /* BodyParser.swift */,
 				5299635E1C32B1F2007D30D6 /* Constants.swift */,
 				528A0E4B1C3938BB002AFC9A /* Controllers.swift */,
@@ -346,6 +349,7 @@
 				528A0E501C393990002AFC9A /* Auth.swift in Sources */,
 				528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */,
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
+				52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */,
 				528A0E541C393A59002AFC9A /* DBModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

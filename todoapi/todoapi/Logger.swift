@@ -10,11 +10,13 @@ import Kunugi
 import CoreFoundation
 
 struct Logger: WrapMiddleware, AnyRequestHandleable {
-    func handle(ctx: ContextBox, @noescape yieldNext: () throws -> Void) throws {
+    func handle(ctx: ContextBox, @noescape yieldNext: () throws -> MiddlewareResult) throws -> MiddlewareResult {
         let t1 = CFAbsoluteTimeGetCurrent()
-        print("logger before \(ctx)")
-        try yieldNext()
+        print("Logger before: \(ctx)")
+        let res = try yieldNext()
         let t2 = CFAbsoluteTimeGetCurrent()
-        print("logger after \(ctx),\n\(ctx.request.method) \(ctx.request.uri.path ?? "") \(t2-t1)s")
+        print("Logger after: \(ctx),\n\(ctx.request.method) \(ctx.request.uri.path ?? "") \(t2-t1)s")
+        print("Logger response: ", res)
+        return res
     }
 }
