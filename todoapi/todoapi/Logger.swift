@@ -16,7 +16,7 @@ struct Logger: WrapMiddleware, AnyRequestHandleable {
         let res = try yieldNext()
         let t2 = CFAbsoluteTimeGetCurrent()
         print("Logger after: \(ctx),\n\(ctx.request.method) \(ctx.request.uri.path ?? "") \(t2-t1)s")
-        print("Logger response: ", res)
+        //print("Logger response: ", res) // has memory leak?
         return res
     }
 }

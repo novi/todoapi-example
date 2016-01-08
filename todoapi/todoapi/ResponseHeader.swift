@@ -14,7 +14,7 @@ struct AdditionalResponseHeader: WrapMiddleware, AnyRequestHandleable {
         print("AdditionalResponseHeader before")
         let res = try yieldNext()
         print("AdditionalResponseHeader after")
-        print("AdditionalResponseHeader response: ", res)
+        //print("AdditionalResponseHeader response: ", res) // has memory leak?
         switch res {
         case .Respond(let res):
             var headers = res.headers
