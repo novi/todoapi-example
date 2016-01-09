@@ -42,4 +42,10 @@ class App: AppType {
     func catchError(e: ErrorType) {
         print("internal server error: \(e)")
     }
+    
+    func prepare() {
+        do {
+            try pool.createTodoTable()
+        } catch { }
+    }
 }

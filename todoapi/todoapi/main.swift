@@ -20,47 +20,20 @@ struct DBOptions: ConnectionOption {
 
 let app = App()
 
-app.use(Logger())
-
 app.use(BodyParser())
 
-// Controller Style Handler
-// http --verbose POST localhost:3000/user/sum x-auth:uuuu a:=1 b:=2 -> 200 OK
-// http --verbose POST localhost:3000/user/sum x-auth:uuuu a:=1 -> Bad Request
-// http --verbose PUT localhost:3000/user/sum x-auth:uuuu a:=1 b:=2 (using MySQL)
-app.use(Mount("/user", Route("/sum", SumController())))
-
-// http --verbose POST localhost:3000/user x-auth:user a:=1 b:=2 -> 200 OK
-// http --verbose POST localhost:3000/user x-auth:uuuu a:=1 b:=2 -> Forbidden
-app.use(Mount("/user", AuthUser(authAs: "user") >>> UserController()))
-
-// Nested Mount
-// http --verbose POST localhost:3000/dev/user x-auth:user a:=1 b:=2 -> 200 OK
-// http --verbose POST localhost:3000/dev/user x-auth:uuuu a:=1 b:=2 -> Forbidden
-app.use( Mount("/dev", Mount("/user", AuthUser(authAs: "user") >>> UserController()) ))
+// List: http --verbose "localhost:3000/todo?count=100"
+// Create: http --verbose localhost:3000/todo title=Hello
+app.use( Route("/todo", TodoListController()) )
 
 
-// Closure Style Handler
-let router = Router()
-router.get("/test") { ctx in
-    return .Respond(Response(status: .OK, body: "here is test"))
-}
+// Get: http --verbose localhost:3000/todo/1
+// Put: http --verbose PUT localhost:3000/todo/1 title=World done:=false
+// Delete: http --verbose DELETE localhost:3000/todo/1
+app.use( Route("/todo/:id", TodoController()) )
 
-// http --verbose PUT localhost:3000/hello
-router.all("/hello") { ctx in
-    return .Respond(Response(status: .OK, body: "world as \(ctx.request.method)"))
-}
-app.use(router)
 
-// http --verbose POST localhost:3000/private/something x-auth:private a:=1 b:=2 -> 200 OK
-// http --verbose POST localhost:3000/private/something x-auth:pppp a:=1 b:=2 -> 200 OK
-// http --verbose POST localhost:3000/private/1234 x-auth:private a:=1 b:=2 -> 200 OK
-// http --verbose POST localhost:3000/private/1234 x-auth:pppp a:=1 b:=2 -> Forbidden
-app.use(Mount("/private", compose(
-    Route("/something", PrivateController(name: "something") ),
-    Route("/:id", AuthUser(authAs: "private") >>> PrivateController(name: "by id"))
-    ) ))
-
+app.prepare()
 
 let server = Server(port: 3000, responder: app.responder)
 print("listening...")

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		522661B01C3931250055E771 /* Kunugi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522661AA1C3931160055E771 /* Kunugi.framework */; };
 		528A0E241C3933DD002AFC9A /* Epoch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528A0E1F1C3933CA002AFC9A /* Epoch.framework */; };
-		528A0E421C393843002AFC9A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E411C393843002AFC9A /* Logger.swift */; };
 		528A0E4A1C393898002AFC9A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E491C393898002AFC9A /* App.swift */; };
 		528A0E4C1C3938BB002AFC9A /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E4B1C3938BB002AFC9A /* Controllers.swift */; };
 		528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E4D1C39396A002AFC9A /* BodyParser.swift */; };
@@ -75,7 +74,6 @@
 /* Begin PBXFileReference section */
 		522661A21C3931160055E771 /* Kunugi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kunugi.xcodeproj; path = "../../Kunugi/OSX Projects/Kunugi/Kunugi.xcodeproj"; sourceTree = "<group>"; };
 		528A0E171C3933CA002AFC9A /* Epoch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Epoch.xcodeproj; path = ../External/Epoch/Xcode/Epoch.xcodeproj; sourceTree = "<group>"; };
-		528A0E411C393843002AFC9A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		528A0E491C393898002AFC9A /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		528A0E4B1C3938BB002AFC9A /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
 		528A0E4D1C39396A002AFC9A /* BodyParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyParser.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				528A0E531C393A59002AFC9A /* DBModel.swift */,
 				528A0E491C393898002AFC9A /* App.swift */,
 				528A0E4F1C393990002AFC9A /* Auth.swift */,
-				528A0E411C393843002AFC9A /* Logger.swift */,
 				528A0E4D1C39396A002AFC9A /* BodyParser.swift */,
 				5299635E1C32B1F2007D30D6 /* Constants.swift */,
 				528A0E4B1C3938BB002AFC9A /* Controllers.swift */,
@@ -342,7 +339,6 @@
 				529963251C32AFE1007D30D6 /* main.swift in Sources */,
 				528A0E4C1C3938BB002AFC9A /* Controllers.swift in Sources */,
 				528A0E4A1C393898002AFC9A /* App.swift in Sources */,
-				528A0E421C393843002AFC9A /* Logger.swift in Sources */,
 				528A0E501C393990002AFC9A /* Auth.swift in Sources */,
 				528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */,
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
