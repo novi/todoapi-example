@@ -1,6 +1,3 @@
 [submodule "External/Epoch"]
 	path = External/Epoch
 	url = https://github.com/Zewo/Epoch.git
-[submodule "External/MySQL"]
-	path = External/MySQL
-	url = https://github.com/novi/mysql-swift
