@@ -50,9 +50,7 @@ struct TodoController: ControllerMiddleware, AnyRequestHandleable {
     func put(ctx: ContextBox) throws -> MiddlewareResult {
         let id = (try ctx.get() as RequestParameterId).id
         let ctx = ctx as! Context
-        guard let body = ctx.body as? [String:AnyObject] else {
-            return .Respond( Response(status: .BadRequest) )
-        }
+        let body = ctx.body
         
         var params: [String: QueryParameter?] = [:]
         if let title = body["title"] as? String {
@@ -87,7 +85,8 @@ struct TodoListController: ControllerMiddleware, AnyRequestHandleable {
     }
     func post(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
-        guard let body = ctx.body as? NSDictionary, let title = body["title"] as? String else {
+        let body = ctx.body
+        guard let title = body["title"] as? String else {
             return .Respond(Response(status: .BadRequest))
         }
         let todo = Row.Todo(id: 0, title: title, done: false, updatedAt: SQLDate.now(timeZone: ctx.pool.options.timeZone))

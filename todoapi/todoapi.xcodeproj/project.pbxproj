@@ -12,7 +12,6 @@
 		528A0E4A1C393898002AFC9A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E491C393898002AFC9A /* App.swift */; };
 		528A0E4C1C3938BB002AFC9A /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E4B1C3938BB002AFC9A /* Controllers.swift */; };
 		528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E4D1C39396A002AFC9A /* BodyParser.swift */; };
-		528A0E501C393990002AFC9A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E4F1C393990002AFC9A /* Auth.swift */; };
 		528A0E541C393A59002AFC9A /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E531C393A59002AFC9A /* DBModel.swift */; };
 		529963251C32AFE1007D30D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529963241C32AFE1007D30D6 /* main.swift */; };
 		5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299635E1C32B1F2007D30D6 /* Constants.swift */; };
@@ -77,7 +76,6 @@
 		528A0E491C393898002AFC9A /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		528A0E4B1C3938BB002AFC9A /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
 		528A0E4D1C39396A002AFC9A /* BodyParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyParser.swift; sourceTree = "<group>"; };
-		528A0E4F1C393990002AFC9A /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		528A0E531C393A59002AFC9A /* DBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
 		529963211C32AFE1007D30D6 /* todoapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529963241C32AFE1007D30D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				528A0E531C393A59002AFC9A /* DBModel.swift */,
 				528A0E491C393898002AFC9A /* App.swift */,
-				528A0E4F1C393990002AFC9A /* Auth.swift */,
 				528A0E4D1C39396A002AFC9A /* BodyParser.swift */,
 				5299635E1C32B1F2007D30D6 /* Constants.swift */,
 				528A0E4B1C3938BB002AFC9A /* Controllers.swift */,
@@ -339,7 +336,6 @@
 				529963251C32AFE1007D30D6 /* main.swift in Sources */,
 				528A0E4C1C3938BB002AFC9A /* Controllers.swift in Sources */,
 				528A0E4A1C393898002AFC9A /* App.swift in Sources */,
-				528A0E501C393990002AFC9A /* Auth.swift in Sources */,
 				528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */,
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
 				528A0E541C393A59002AFC9A /* DBModel.swift in Sources */,

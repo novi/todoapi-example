@@ -9,7 +9,7 @@
 import Kunugi
 
 struct RequestBodyContext: ContextType {
-    let body: AnyObject
+    let body: [String:AnyObject]
 }
 
 struct BodyParser: MiddlewareType, AnyRequestHandleable {
@@ -21,7 +21,7 @@ struct BodyParser: MiddlewareType, AnyRequestHandleable {
         } else {
             body = [:]
         }
-        try ctx.put(RequestBodyContext(body: body))
+        try ctx.put(RequestBodyContext(body: (body as? [String:AnyObject]) ?? [:] ))
         return .Next
     }
 }
