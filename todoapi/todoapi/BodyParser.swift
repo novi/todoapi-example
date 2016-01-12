@@ -9,25 +9,27 @@
 import Kunugi
 
 struct RequestBodyContext: ContextType {
-    let body: AnyObject
+    let body: [String:AnyObject]
 }
 
 struct BodyParser: MiddlewareType, AnyRequestHandleable {
+    let empty: [String:AnyObject] = [:]
+    
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
-        let body: AnyObject
+        let parsed: AnyObject
         if ctx.request.body.count > 0 {
             let data = NSData(bytes: ctx.request.body, length: ctx.request.body.count)
-            body = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) ?? [:]
+            parsed = (try? NSJSONSerialization.JSONObjectWithData(data, options: [])) ?? empty
         } else {
-            body = [:]
+            parsed = empty
         }
-        try ctx.put(RequestBodyContext(body: body))
+        try ctx.put(RequestBodyContext(body: (parsed as? [String:AnyObject]) ?? empty ))
         return .Next
     }
 }
 
 extension Context {
-    var body: AnyObject {
+    var body: [String:AnyObject] {
         do {
             return (try self.get() as RequestBodyContext).body
         } catch {

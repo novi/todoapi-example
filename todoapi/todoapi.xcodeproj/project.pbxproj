@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		522661B01C3931250055E771 /* Kunugi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522661AA1C3931160055E771 /* Kunugi.framework */; };
+		527E48E21C44DF4F002C1732 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E48E11C44DF4F002C1732 /* TodoController.swift */; };
 		528A0E241C3933DD002AFC9A /* Epoch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528A0E1F1C3933CA002AFC9A /* Epoch.framework */; };
 		528A0E421C393843002AFC9A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E411C393843002AFC9A /* Logger.swift */; };
 		528A0E4A1C393898002AFC9A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E491C393898002AFC9A /* App.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		522661A21C3931160055E771 /* Kunugi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kunugi.xcodeproj; path = "../../Kunugi/OSX Projects/Kunugi/Kunugi.xcodeproj"; sourceTree = "<group>"; };
+		527E48E11C44DF4F002C1732 /* TodoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 		528A0E171C3933CA002AFC9A /* Epoch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Epoch.xcodeproj; path = ../External/Epoch/Xcode/Epoch.xcodeproj; sourceTree = "<group>"; };
 		528A0E411C393843002AFC9A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		528A0E491C393898002AFC9A /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				528A0E4D1C39396A002AFC9A /* BodyParser.swift */,
 				5299635E1C32B1F2007D30D6 /* Constants.swift */,
 				528A0E4B1C3938BB002AFC9A /* Controllers.swift */,
+				527E48E11C44DF4F002C1732 /* TodoController.swift */,
 				529963241C32AFE1007D30D6 /* main.swift */,
 				529963261C32AFE1007D30D6 /* Info.plist */,
 			);
@@ -351,6 +354,7 @@
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
 				52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */,
 				528A0E541C393A59002AFC9A /* DBModel.swift in Sources */,
+				527E48E21C44DF4F002C1732 /* TodoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

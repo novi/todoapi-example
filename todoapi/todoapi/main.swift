@@ -26,6 +26,7 @@ app.use(Logger())
 
 app.use(BodyParser())
 
+
 // Controller Style Handler
 // http --verbose POST localhost:3000/user/sum x-auth:uuuu a:=1 b:=2 -> 200 OK
 // http --verbose POST localhost:3000/user/sum x-auth:uuuu a:=1 -> Bad Request
@@ -62,6 +63,16 @@ app.use(Mount("/private", compose(
     Route("/something", PrivateController(name: "something") ),
     Route("/:id", AuthUser(authAs: "private") >>> PrivateController(name: "by id"))
     ) ))
+
+// List: http --verbose "localhost:3000/todo?count=100"
+// Create: http --verbose localhost:3000/todo title=Hello
+app.use( Route("/todo", TodoListController()) )
+
+
+// Get: http --verbose localhost:3000/todo/1
+// Put: http --verbose PUT localhost:3000/todo/1 title=World done:=false
+// Delete: http --verbose DELETE localhost:3000/todo/1
+app.use( Route("/todo/:id", TodoController()) )
 
 
 let server = Server(port: 3000, responder: app.responder)

@@ -36,7 +36,8 @@ struct UserController: ControllerMiddleware, AnyRequestHandleable {
 struct SumController: ControllerMiddleware, AnyRequestHandleable {
     func post(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
-        guard let body = ctx.body as? NSDictionary, let a = body["a"] as? Int, let b = body["b"] as? Int else {
+        let body = ctx.body
+        guard let a = body["a"] as? Int, let b = body["b"] as? Int else {
             return .Respond(Response(status: .BadRequest))
         }
         return .Respond(Response(status: .OK, body: "\(a) + \(b) is \(a+b)"))
@@ -44,7 +45,8 @@ struct SumController: ControllerMiddleware, AnyRequestHandleable {
     // calc using mysql
     func put(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
-        guard let body = ctx.body as? NSDictionary, let a = body["a"] as? Int, let b = body["b"] as? Int else {
+        let body = ctx.body
+        guard let a = body["a"] as? Int, let b = body["b"] as? Int else {
             return .Respond(Response(status: .BadRequest))
         }
         let rows:[Row.MathResult] = try ctx.pool.execute{ conn in

@@ -18,6 +18,9 @@ class Context: ContextBox {
         self.request = request
         self.pool = pool
     }
+    deinit {
+        //print("context deinit")
+    }
 }
 
 class App: AppType {
