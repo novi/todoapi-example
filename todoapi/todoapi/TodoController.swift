@@ -8,7 +8,6 @@
 
 import Kunugi
 import swiftra
-import Core
 import MySQL
 
 struct RequestParameterId: ContextType {

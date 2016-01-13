@@ -4,3 +4,6 @@
 [submodule "External/swiftra"]
 	path = External/swiftra
 	url = https://github.com/takebayashi/swiftra.git
+[submodule "External/JSON"]
+	path = External/JSON
+	url = https://github.com/Zewo/JSON.git

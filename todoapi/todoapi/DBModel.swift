@@ -7,7 +7,6 @@
 //
 
 import MySQL
-import Core
 
 struct Row {
     

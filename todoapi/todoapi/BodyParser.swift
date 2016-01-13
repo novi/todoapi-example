@@ -7,7 +7,6 @@
 //
 
 import Kunugi
-import Core
 
 struct RequestBodyContext: ContextType {
     let body: JSON

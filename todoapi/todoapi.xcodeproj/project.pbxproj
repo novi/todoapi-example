@@ -21,6 +21,10 @@
 		52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */; };
 		52F5F4901C468482008D2B3A /* swiftra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F5F48F1C468477008D2B3A /* swiftra.framework */; };
 		52F5F4961C4692D0008D2B3A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4951C4692D0008D2B3A /* Response.swift */; };
+		52F5F4A01C4696B0008D2B3A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49C1C4696B0008D2B3A /* JSON.swift */; };
+		52F5F4A11C4696B0008D2B3A /* JSONParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */; };
+		52F5F4A21C4696B0008D2B3A /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49E1C4696B0008D2B3A /* JSONParser.swift */; };
+		52F5F4A31C4696B0008D2B3A /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49F1C4696B0008D2B3A /* JSONSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
 		52F5F4851C468477008D2B3A /* swiftra.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swiftra.xcodeproj; path = "../OSX Projects/swiftra/swiftra.xcodeproj"; sourceTree = "<group>"; };
 		52F5F4951C4692D0008D2B3A /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		52F5F49C1C4696B0008D2B3A /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParseError.swift; sourceTree = "<group>"; };
+		52F5F49E1C4696B0008D2B3A /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		52F5F49F1C4696B0008D2B3A /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +176,7 @@
 		529963381C32B088007D30D6 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				52F5F49B1C4696B0008D2B3A /* JSON */,
 				52F5F4851C468477008D2B3A /* swiftra.xcodeproj */,
 				529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */,
 				522661A21C3931160055E771 /* Kunugi.xcodeproj */,
@@ -190,6 +199,18 @@
 				52F5F48F1C468477008D2B3A /* swiftra.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		52F5F49B1C4696B0008D2B3A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				52F5F49C1C4696B0008D2B3A /* JSON.swift */,
+				52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */,
+				52F5F49E1C4696B0008D2B3A /* JSONParser.swift */,
+				52F5F49F1C4696B0008D2B3A /* JSONSerializer.swift */,
+			);
+			name = JSON;
+			path = ../External/JSON/Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,13 +356,17 @@
 			files = (
 				529963251C32AFE1007D30D6 /* main.swift in Sources */,
 				528A0E4C1C3938BB002AFC9A /* Controllers.swift in Sources */,
+				52F5F4A21C4696B0008D2B3A /* JSONParser.swift in Sources */,
 				528A0E4A1C393898002AFC9A /* App.swift in Sources */,
+				52F5F4A01C4696B0008D2B3A /* JSON.swift in Sources */,
 				528A0E421C393843002AFC9A /* Logger.swift in Sources */,
 				528A0E501C393990002AFC9A /* Auth.swift in Sources */,
 				528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */,
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
 				52F5F4961C4692D0008D2B3A /* Response.swift in Sources */,
+				52F5F4A31C4696B0008D2B3A /* JSONSerializer.swift in Sources */,
 				52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */,
+				52F5F4A11C4696B0008D2B3A /* JSONParseError.swift in Sources */,
 				528A0E541C393A59002AFC9A /* DBModel.swift in Sources */,
 				527E48E21C44DF4F002C1732 /* TodoController.swift in Sources */,
 			);

@@ -7,7 +7,6 @@
 //
 
 import swiftra
-import Core
 
 extension Response {
     init(status: Status, headers: [String: String] = [:], json: JSON) {
