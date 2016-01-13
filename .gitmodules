@@ -1,6 +1,3 @@
-[submodule "External/Epoch"]
-	path = External/Epoch
-	url = https://github.com/Zewo/Epoch.git
 [submodule "External/http4swift"]
 	path = External/http4swift
 	url = https://github.com/takebayashi/http4swift.git
