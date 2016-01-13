@@ -10,6 +10,7 @@ import Kunugi
 import HTTP
 import Core
 import MySQL
+import Foundation
 
 struct RequestParameterId: ContextType{
     let id: Int
