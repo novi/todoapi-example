@@ -7,8 +7,9 @@
 //
 
 import Kunugi
-import HTTP
+import swiftra
 
+/*
 struct AdditionalResponseHeader: WrapMiddleware, AnyRequestHandleable {
     func handle(ctx: ContextBox, @noescape yieldNext: () throws -> MiddlewareResult) throws -> MiddlewareResult {
         print("AdditionalResponseHeader before")
@@ -26,3 +27,4 @@ struct AdditionalResponseHeader: WrapMiddleware, AnyRequestHandleable {
         return res
     }
 }
+*/

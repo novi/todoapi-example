@@ -1,8 +1,12 @@
 
 import MySQL
-import HTTP
-import Epoch
+import swiftra
 import Kunugi
+
+import struct http4swift.HTTPRequest
+import struct http4swift.HTTPServer
+import struct http4swift.SocketAddress
+import struct http4swift.Socket
 
 // Provide DB options as following in Constants.swift
 /*
@@ -20,9 +24,9 @@ struct DBOptions: ConnectionOption {
 
 let app = App()
 
-app.use(AdditionalResponseHeader())
+//app.use(AdditionalResponseHeader())
 
-app.use(Logger())
+//app.use(Logger())
 
 app.use(BodyParser())
 
@@ -46,12 +50,12 @@ app.use( Mount("/dev", Mount("/user", AuthUser(authAs: "user") >>> UserControlle
 // Closure Style Handler
 let router = Router()
 router.get("/test") { ctx in
-    return .Respond(Response(status: .OK, body: "here is test"))
+    return .Respond(Response("here is test"))
 }
 
 // http --verbose PUT localhost:3000/hello
 router.all("/hello") { ctx in
-    return .Respond(Response(status: .OK, body: "world as \(ctx.request.method)"))
+    return .Respond(Response("world as \(ctx.method)"))
 }
 app.use(router)
 
@@ -75,7 +79,10 @@ app.use( Route("/todo", TodoListController()) )
 app.use( Route("/todo/:id", TodoController()) )
 
 
-let server = Server(port: 3000, responder: app.responder)
+//let server = Server(port: 3000, responder: app.responder)
 print("listening...")
-server.start()
+//server.start()
+swiftra.serve(3000) { req  in
+    return app.dispatch(req)
+}
 

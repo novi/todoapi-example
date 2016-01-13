@@ -7,16 +7,16 @@
 //
 
 import Kunugi
-import HTTP
+import swiftra
 import MySQL
 
 struct PrivateController: ControllerMiddleware, AnyRequestHandleable {
     let name: String
     func get(ctx: ContextBox) throws -> MiddlewareResult {
-        return .Respond(Response(status: .OK, body: "private get \(name) \(ctx.request.parameters)"))
+        return .Respond(Response("private get \(name) \(ctx.params)"))
     }    
     func post(ctx: ContextBox) throws -> MiddlewareResult {
-        return .Respond(Response(status: .Created, body: "private post \(name) \(ctx.request.parameters)"))
+        return .Respond(Response("private post \(name) \(ctx.params)"))
     }
 }
 
@@ -24,12 +24,12 @@ struct PrivateController: ControllerMiddleware, AnyRequestHandleable {
 struct UserController: ControllerMiddleware, AnyRequestHandleable {
     func get(ctx: ContextBox) throws -> MiddlewareResult {
         let user = try ctx.get() as UserAuthenticated
-        return .Respond(Response(status: .OK, body: "user is authenticated as \(user.userType)"))
+        return .Respond(Response("user is authenticated as \(user.userType)"))
     }
     
     func post(ctx: ContextBox) throws -> MiddlewareResult {
         let user = try ctx.get() as UserAuthenticated
-        return .Respond(Response(status: .OK, body: "user is authenticated as \(user.userType)"))
+        return .Respond(Response("user is authenticated as \(user.userType)"))
     }
 }
 
@@ -37,22 +37,22 @@ struct SumController: ControllerMiddleware, AnyRequestHandleable {
     func post(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
         let body = ctx.body
-        guard let a = body["a"] as? Int, let b = body["b"] as? Int else {
-            return .Respond(Response(status: .BadRequest))
+        guard let a = body["a"]?.intValue, let b = body["b"]?.intValue else {
+            return .Respond(Response(.BadRequest))
         }
-        return .Respond(Response(status: .OK, body: "\(a) + \(b) is \(a+b)"))
+        return .Respond(Response("\(a) + \(b) is \(a+b)"))
     }
     // calc using mysql
     func put(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
         let body = ctx.body
-        guard let a = body["a"] as? Int, let b = body["b"] as? Int else {
-            return .Respond(Response(status: .BadRequest))
+        guard let a = body["a"]?.intValue, let b = body["b"]?.intValue else {
+            return .Respond(Response(.BadRequest))
         }
         let rows:[Row.MathResult] = try ctx.pool.execute{ conn in
             try conn.query("SELECT ? + ? as val;", [a, b])
         }
         let val = rows[0]
-        return .Respond(Response(status: .OK, body: "\(a) + \(b) is \(val.val)"))
+        return .Respond(Response("\(a) + \(b) is \(val.val)"))
     }
 }

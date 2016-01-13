@@ -6,7 +6,7 @@
 //  Copyright © 2016 Yusuke Ito. All rights reserved.
 //
 
-import HTTP
+import swiftra
 import Kunugi
 import MySQL
 
@@ -17,9 +17,16 @@ class Context: ContextBox {
     init(request: Request, pool: ConnectionPool) {
         self.request = request
         self.pool = pool
+        self.path = request.path
     }
     deinit {
         //print("context deinit")
+    }
+    
+    var path: String
+    var params: [String: String] = [:]
+    var method: Kunugi.Method {
+        return Kunugi.Method(rawValue: request.method) ?? Kunugi.Method.OPTIONS
     }
 }
 
@@ -44,5 +51,20 @@ class App: AppType {
     
     func catchError(e: ErrorType) {
         print("internal server error: \(e)")
+    }
+
+    
+    func dispatch(request: Request) -> Response? {
+        do {
+            switch try handler.handleIfNeeded(try self.createContext(request)) {
+            case .Next:
+                return Response(.NotFound)
+            case .Respond(let res):
+                return res
+            }
+        } catch(let e) {
+            self.catchError(e)
+            return Response(.InternalServerError)
+        }
     }
 }

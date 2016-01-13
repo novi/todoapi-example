@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		522661B01C3931250055E771 /* Kunugi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522661AA1C3931160055E771 /* Kunugi.framework */; };
 		527E48E21C44DF4F002C1732 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E48E11C44DF4F002C1732 /* TodoController.swift */; };
-		528A0E241C3933DD002AFC9A /* Epoch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528A0E1F1C3933CA002AFC9A /* Epoch.framework */; };
 		528A0E421C393843002AFC9A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E411C393843002AFC9A /* Logger.swift */; };
 		528A0E4A1C393898002AFC9A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E491C393898002AFC9A /* App.swift */; };
 		528A0E4C1C3938BB002AFC9A /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E4B1C3938BB002AFC9A /* Controllers.swift */; };
@@ -20,6 +19,8 @@
 		5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299635E1C32B1F2007D30D6 /* Constants.swift */; };
 		529CCF7F1C3F9CBD00084373 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529CCF7A1C3F9C4A00084373 /* MySQL.framework */; };
 		52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */; };
+		52F5F4901C468482008D2B3A /* swiftra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F5F48F1C468477008D2B3A /* swiftra.framework */; };
+		52F5F4961C4692D0008D2B3A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4951C4692D0008D2B3A /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,20 +37,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 522661611C392E190055E771;
 			remoteInfo = KunugiTests;
-		};
-		528A0E1E1C3933CA002AFC9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 528A0E171C3933CA002AFC9A /* Epoch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B024A8841C2F319B00FBB44A;
-			remoteInfo = Epoch;
-		};
-		528A0E201C3933CA002AFC9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 528A0E171C3933CA002AFC9A /* Epoch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B024A88E1C2F319B00FBB44A;
-			remoteInfo = EpochTests;
 		};
 		5299632C1C32AFE1007D30D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -72,12 +59,18 @@
 			remoteGlobalIDString = 529215911BDB8CD6009B031A;
 			remoteInfo = MySQLTests;
 		};
+		52F5F48E1C468477008D2B3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F5F4851C468477008D2B3A /* swiftra.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52F5F43E1C4683EE008D2B3A;
+			remoteInfo = swiftra;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		522661A21C3931160055E771 /* Kunugi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kunugi.xcodeproj; path = "../../Kunugi/OSX Projects/Kunugi/Kunugi.xcodeproj"; sourceTree = "<group>"; };
 		527E48E11C44DF4F002C1732 /* TodoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
-		528A0E171C3933CA002AFC9A /* Epoch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Epoch.xcodeproj; path = ../External/Epoch/Xcode/Epoch.xcodeproj; sourceTree = "<group>"; };
 		528A0E411C393843002AFC9A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		528A0E491C393898002AFC9A /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		528A0E4B1C3938BB002AFC9A /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
@@ -92,6 +85,8 @@
 		5299635E1C32B1F2007D30D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../External/MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
 		52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
+		52F5F4851C468477008D2B3A /* swiftra.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swiftra.xcodeproj; path = "../OSX Projects/swiftra/swiftra.xcodeproj"; sourceTree = "<group>"; };
+		52F5F4951C4692D0008D2B3A /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F5F4901C468482008D2B3A /* swiftra.framework in Frameworks */,
 				529CCF7F1C3F9CBD00084373 /* MySQL.framework in Frameworks */,
-				528A0E241C3933DD002AFC9A /* Epoch.framework in Frameworks */,
 				522661B01C3931250055E771 /* Kunugi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,15 +115,6 @@
 			children = (
 				522661AA1C3931160055E771 /* Kunugi.framework */,
 				522661AC1C3931160055E771 /* KunugiTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		528A0E181C3933CA002AFC9A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				528A0E1F1C3933CA002AFC9A /* Epoch.framework */,
-				528A0E211C3933CA002AFC9A /* EpochTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +149,7 @@
 				528A0E4D1C39396A002AFC9A /* BodyParser.swift */,
 				5299635E1C32B1F2007D30D6 /* Constants.swift */,
 				528A0E4B1C3938BB002AFC9A /* Controllers.swift */,
+				52F5F4951C4692D0008D2B3A /* Response.swift */,
 				527E48E11C44DF4F002C1732 /* TodoController.swift */,
 				529963241C32AFE1007D30D6 /* main.swift */,
 				529963261C32AFE1007D30D6 /* Info.plist */,
@@ -181,8 +168,8 @@
 		529963381C32B088007D30D6 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				52F5F4851C468477008D2B3A /* swiftra.xcodeproj */,
 				529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */,
-				528A0E171C3933CA002AFC9A /* Epoch.xcodeproj */,
 				522661A21C3931160055E771 /* Kunugi.xcodeproj */,
 			);
 			name = External;
@@ -193,6 +180,14 @@
 			children = (
 				529CCF7A1C3F9C4A00084373 /* MySQL.framework */,
 				529CCF7C1C3F9C4A00084373 /* MySQLTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52F5F4861C468477008D2B3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52F5F48F1C468477008D2B3A /* swiftra.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,16 +260,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 528A0E181C3933CA002AFC9A /* Products */;
-					ProjectRef = 528A0E171C3933CA002AFC9A /* Epoch.xcodeproj */;
-				},
-				{
 					ProductGroup = 522661A31C3931160055E771 /* Products */;
 					ProjectRef = 522661A21C3931160055E771 /* Kunugi.xcodeproj */;
 				},
 				{
 					ProductGroup = 529CCF751C3F9C4A00084373 /* Products */;
 					ProjectRef = 529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */;
+				},
+				{
+					ProductGroup = 52F5F4861C468477008D2B3A /* Products */;
+					ProjectRef = 52F5F4851C468477008D2B3A /* swiftra.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -300,20 +295,6 @@
 			remoteRef = 522661AB1C3931160055E771 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		528A0E1F1C3933CA002AFC9A /* Epoch.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Epoch.framework;
-			remoteRef = 528A0E1E1C3933CA002AFC9A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		528A0E211C3933CA002AFC9A /* EpochTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EpochTests.xctest;
-			remoteRef = 528A0E201C3933CA002AFC9A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		529CCF7A1C3F9C4A00084373 /* MySQL.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -326,6 +307,13 @@
 			fileType = wrapper.cfbundle;
 			path = MySQLTests.xctest;
 			remoteRef = 529CCF7B1C3F9C4A00084373 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52F5F48F1C468477008D2B3A /* swiftra.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = swiftra.framework;
+			remoteRef = 52F5F48E1C468477008D2B3A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -352,6 +340,7 @@
 				528A0E501C393990002AFC9A /* Auth.swift in Sources */,
 				528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */,
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
+				52F5F4961C4692D0008D2B3A /* Response.swift in Sources */,
 				52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */,
 				528A0E541C393A59002AFC9A /* DBModel.swift in Sources */,
 				527E48E21C44DF4F002C1732 /* TodoController.swift in Sources */,

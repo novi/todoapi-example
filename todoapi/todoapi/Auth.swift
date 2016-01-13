@@ -7,7 +7,7 @@
 //
 
 import Kunugi
-import HTTP
+import swiftra
 
 struct UserAuthenticated: ContextType {
     let userType: String
@@ -17,11 +17,12 @@ struct AuthUser: MiddlewareType, AnyRequestHandleable {
     let authAs: String
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
         print("auth check \(authAs)")
+        let ctx = ctx as! Context
         if let xauth = ctx.request.headers["x-auth"] where xauth.hasPrefix(authAs) {
             try ctx.put(UserAuthenticated(userType: xauth))
             return .Next
         }
-        return .Respond(Response(status: .Forbidden))
+        return .Respond(Response(.Forbidden))
     }
     init(authAs: String) {
         self.authAs = authAs
