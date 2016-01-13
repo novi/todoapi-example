@@ -52,19 +52,21 @@ class App: AppType {
     func catchError(e: ErrorType) {
         print("internal server error: \(e)")
     }
-
     
-    func dispatch(request: Request) -> Response? {
-        do {
-            switch try handler.handleIfNeeded(try self.createContext(request)) {
-            case .Next:
-                return Response(.NotFound)
-            case .Respond(let res):
-                return res
+    var dispatcher: (Request -> Response) {
+        return { request in
+            let handler = self.handler
+            do {
+                switch try handler.handleIfNeeded(try self.createContext(request)) {
+                case .Next:
+                    return Response(.NotFound)
+                case .Respond(let res):
+                    return res
+                }
+            } catch(let e) {
+                self.catchError(e)
+                return Response(.InternalServerError)
             }
-        } catch(let e) {
-            self.catchError(e)
-            return Response(.InternalServerError)
         }
     }
 }

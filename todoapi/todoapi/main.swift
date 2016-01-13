@@ -3,11 +3,6 @@ import MySQL
 import swiftra
 import Kunugi
 
-import struct http4swift.HTTPRequest
-import struct http4swift.HTTPServer
-import struct http4swift.SocketAddress
-import struct http4swift.Socket
-
 // Provide DB options as following in Constants.swift
 /*
 
@@ -61,7 +56,7 @@ app.use(router)
 
 // http --verbose POST localhost:3000/private/something x-auth:private a:=1 b:=2 -> 200 OK
 // http --verbose POST localhost:3000/private/something x-auth:pppp a:=1 b:=2 -> 200 OK
-// http --verbose POST localhost:3000/private/1234 x-auth:private a:=1 b:=2 -> 200 OK
+// http --verbose POST localhost:3000/private/1234 x-auth:private a:=1 b:=2 -> 200 OK ["id": "1234"]
 // http --verbose POST localhost:3000/private/1234 x-auth:pppp a:=1 b:=2 -> Forbidden
 app.use(Mount("/private", compose(
     Route("/something", PrivateController(name: "something") ),
@@ -82,7 +77,5 @@ app.use( Route("/todo/:id", TodoController()) )
 //let server = Server(port: 3000, responder: app.responder)
 print("listening...")
 //server.start()
-swiftra.serve(3000) { req  in
-    return app.dispatch(req)
-}
+swiftra.serve(3000, app.dispatcher)
 
