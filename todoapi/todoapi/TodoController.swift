@@ -17,7 +17,7 @@ struct RequestParameterId: ContextType {
 struct TodoController: ControllerMiddleware, AnyRequestHandleable {
     func before(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
-        guard let id = Int(ctx.params["id"] ?? "") else {
+        guard let id = Int(ctx.parameters["id"] ?? "") else {
             return .Respond( Response(.BadRequest) )
         }
         try ctx.put(RequestParameterId(id: id))

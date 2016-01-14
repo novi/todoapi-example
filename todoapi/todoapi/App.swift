@@ -18,16 +18,15 @@ class Context: ContextBox {
         self.request = request
         self.pool = pool
         self.path = request.path
+        self.method = Kunugi.Method(rawValue: request.method) ?? Kunugi.Method.OPTIONS
     }
     deinit {
         //print("context deinit")
     }
     
     var path: String
-    var params: [String: String] = [:]
-    var method: Kunugi.Method {
-        return Kunugi.Method(rawValue: request.method) ?? Kunugi.Method.OPTIONS
-    }
+    var parameters: [String: String] = [:]
+    var method: Kunugi.Method
 }
 
 class App: AppType {

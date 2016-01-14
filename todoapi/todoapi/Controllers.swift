@@ -13,10 +13,10 @@ import MySQL
 struct PrivateController: ControllerMiddleware, AnyRequestHandleable {
     let name: String
     func get(ctx: ContextBox) throws -> MiddlewareResult {
-        return .Respond(Response("private get \(name) \(ctx.params)"))
+        return .Respond(Response("private get \(name) \(ctx.parameters)"))
     }    
     func post(ctx: ContextBox) throws -> MiddlewareResult {
-        return .Respond(Response("private post \(name) \(ctx.params)"))
+        return .Respond(Response("private post \(name) \(ctx.parameters)"))
     }
 }
 
