@@ -19,6 +19,8 @@ struct DBOptions: ConnectionOption {
 
 let app = App()
 
+app.use(MethodOverride())
+
 //app.use(AdditionalResponseHeader())
 
 //app.use(Logger())
@@ -71,6 +73,7 @@ app.use( Route("/todo", TodoListController()) )
 // Get: http --verbose localhost:3000/todo/1
 // Put: http --verbose PUT localhost:3000/todo/1 title=World done:=false
 // Delete: http --verbose DELETE localhost:3000/todo/1
+// Delete: http --verbose POST localhost:3000/todo/1 X-HTTP-Method-Override:DELETE
 app.use( Route("/todo/:id", TodoController()) )
 
 
