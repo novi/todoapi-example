@@ -24,6 +24,7 @@ struct BodyParser: MiddlewareType, AnyRequestHandleable {
     
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
         var body: [String:AnyType] = empty
+        let ctx = ctx as! Context
         if ctx.request.body.count > 0 {
             let data = NSData(bytes: ctx.request.body, length: ctx.request.body.count)
             if let parsed = try? NSJSONSerialization.JSONObjectWithData(data, options: []) {
