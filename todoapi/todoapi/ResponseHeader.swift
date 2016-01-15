@@ -7,9 +7,9 @@
 //
 
 import Kunugi
-import Nest
+import Inquiline
 
-/*
+
 struct AdditionalResponseHeader: WrapMiddleware, AnyRequestHandleable {
     func handle(ctx: ContextBox, @noescape yieldNext: () throws -> MiddlewareResult) throws -> MiddlewareResult {
         print("AdditionalResponseHeader before")
@@ -18,13 +18,11 @@ struct AdditionalResponseHeader: WrapMiddleware, AnyRequestHandleable {
         //print("AdditionalResponseHeader response: ", res) // has memory leak?
         switch res {
         case .Respond(let res):
-            var headers = res.headers
-            headers["X-ADDITIONAL-RESPONSE-HEADER"] = "hey"
-            let newRes = Response(statusCode: res.statusCode, reasonPhrase: res.reasonPhrase, majorVersion: res.majorVersion, minorVersion: res.minorVersion, headers: headers, body: res.body)
-            return .Respond(newRes)
+            var res = res as! Response
+            res.headers.append( ("X-ADDITIONAL-RESPONSE-HEADER", "hey") )
+            return .Respond(res)
         default: break
         }
         return res
     }
 }
-*/

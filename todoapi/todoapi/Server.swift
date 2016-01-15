@@ -14,7 +14,7 @@ extension HTTPRequest {
     var bodyString: String {
         var buffer = body
         buffer.append(CChar(0))
-        return String.fromCString(buffer) ?? ""
+        return String(buffer) ?? ""
     }
 }
 
@@ -41,15 +41,17 @@ public func serve(port: UInt16, app: Application) {
     server.serve { (request, writer) in
         let response = app(Request(req: request))
         
-        let body = (response.body ?? "").bytes()
-        let size = body.filter({ c in return c != 0 }).count
+        let body = response.body?.bytes()
+        let size = body?.filter({ c in return c != 0 }).count ?? 0
         try writer.write("HTTP/1.0 \(response.statusLine)\r\n")
         try writer.write("Content-Length: \(size)\r\n")
         for header in response.headers {
             try writer.write("\(header.0): \(header.1)\r\n")
         }
         try writer.write("\r\n")
-        try writer.write(body)
+        if let body = body {
+            try writer.write(body)
+        }
     }
 }
 

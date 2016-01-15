@@ -22,9 +22,9 @@ let app = App()
 
 app.use(MethodOverride())
 
-//app.use(AdditionalResponseHeader())
+app.use(AdditionalResponseHeader())
 
-//app.use(Logger())
+app.use(Logger())
 
 app.use(BodyParser())
 
