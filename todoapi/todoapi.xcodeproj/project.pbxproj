@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		522661B01C3931250055E771 /* Kunugi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522661AA1C3931160055E771 /* Kunugi.framework */; };
+		525595791C4916C8003F4FEF /* URI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525595781C4916C0003F4FEF /* URI.framework */; };
 		526C14641C490BC600A1ECC5 /* Inquiline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C145E1C490BB300A1ECC5 /* Inquiline.framework */; };
 		526C148D1C49122100A1ECC5 /* http4swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C148C1C49121A00A1ECC5 /* http4swift.framework */; };
 		526C148F1C49123500A1ECC5 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C148E1C49123500A1ECC5 /* Server.swift */; };
@@ -44,6 +45,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 522661611C392E190055E771;
 			remoteInfo = KunugiTests;
+		};
+		525595771C4916C0003F4FEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5255956C1C4916BF003F4FEF /* URI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 525595581C491627003F4FEF;
+			remoteInfo = URI;
 		};
 		526C145D1C490BB300A1ECC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -91,6 +99,7 @@
 
 /* Begin PBXFileReference section */
 		522661A21C3931160055E771 /* Kunugi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kunugi.xcodeproj; path = "../../Kunugi/OSX Projects/Kunugi/Kunugi.xcodeproj"; sourceTree = "<group>"; };
+		5255956C1C4916BF003F4FEF /* URI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = URI.xcodeproj; path = "../OSX Projects/URI/URI.xcodeproj"; sourceTree = "<group>"; };
 		526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Inquiline.xcodeproj; path = "../OSX Projects/Inquiline/Inquiline.xcodeproj"; sourceTree = "<group>"; };
 		526C14871C49121A00A1ECC5 /* http4swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = http4swift.xcodeproj; path = "../OSX Projects/http4swift/http4swift.xcodeproj"; sourceTree = "<group>"; };
 		526C148E1C49123500A1ECC5 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
@@ -123,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525595791C4916C8003F4FEF /* URI.framework in Frameworks */,
 				526C148D1C49122100A1ECC5 /* http4swift.framework in Frameworks */,
 				526C14641C490BC600A1ECC5 /* Inquiline.framework in Frameworks */,
 				529CCF7F1C3F9CBD00084373 /* MySQL.framework in Frameworks */,
@@ -145,6 +155,14 @@
 			children = (
 				522661AA1C3931160055E771 /* Kunugi.framework */,
 				522661AC1C3931160055E771 /* KunugiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5255956D1C4916BF003F4FEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				525595781C4916C0003F4FEF /* URI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +242,7 @@
 		529963381C32B088007D30D6 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				5255956C1C4916BF003F4FEF /* URI.xcodeproj */,
 				526C14871C49121A00A1ECC5 /* http4swift.xcodeproj */,
 				52F5F49B1C4696B0008D2B3A /* JSON */,
 				526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */,
@@ -342,6 +361,10 @@
 					ProductGroup = 529650B61C490461004B75F4 /* Products */;
 					ProjectRef = 529650B51C490461004B75F4 /* Nest.xcodeproj */;
 				},
+				{
+					ProductGroup = 5255956D1C4916BF003F4FEF /* Products */;
+					ProjectRef = 5255956C1C4916BF003F4FEF /* URI.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -364,6 +387,13 @@
 			fileType = wrapper.cfbundle;
 			path = KunugiTests.xctest;
 			remoteRef = 522661AB1C3931160055E771 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		525595781C4916C0003F4FEF /* URI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = URI.framework;
+			remoteRef = 525595771C4916C0003F4FEF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		526C145E1C490BB300A1ECC5 /* Inquiline.framework */ = {

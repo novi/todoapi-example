@@ -13,3 +13,9 @@
 [submodule "External/Inquiline"]
 	path = External/Inquiline
 	url = https://github.com/nestproject/Inquiline.git
+[submodule "External/URI"]
+	path = External/URI
+	url = https://github.com/Zewo/URI.git
+[submodule "External/CURIParser"]
+	path = External/CURIParser
+	url = https://github.com/Zewo/CURIParser.git

@@ -10,15 +10,18 @@ import Nest
 import Kunugi
 import Inquiline
 import MySQL
+import URI
 
 class Context: ContextBox {
     var context: [ContextType] = []
     var request: Request
     let pool: ConnectionPool
     init(request: RequestType, pool: ConnectionPool) {
-        self.request = Request(method: request.method, path: request.path, headers: request.headers, body: request.body)
+        let uri = URI(string: request.path)
+        self.request = Request(method: request.method, path: uri.path ?? "", headers: request.headers, body: request.body)
         self.pool = pool
-        self.path = request.path
+        self.path = self.request.path
+        self.query = uri.query
         self.method = Kunugi.Method(rawValue: request.method) ?? Kunugi.Method.OPTIONS
     }
     deinit {
@@ -27,6 +30,7 @@ class Context: ContextBox {
     
     var path: String
     var parameters: [String: String] = [:]
+    var query: [String: String]
     var method: Kunugi.Method
 }
 
@@ -54,8 +58,8 @@ class App: AppType {
     }
     
     var application: Application {
+        let handler = self.handler
         return { request in
-            let handler = self.handler
             do {
                 switch try handler.handleIfNeeded(try self.createContext(request)) {
                 case .Next:

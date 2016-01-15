@@ -76,7 +76,7 @@ struct TodoListController: ControllerMiddleware, AnyRequestHandleable {
     func get(ctx: ContextBox) throws -> MiddlewareResult {
         
         let ctx = ctx as! Context
-        let limit: Int = 100
+        let limit: Int = Int(ctx.query["count"] ?? "") ?? 100
         let todos: [Row.Todo] = try ctx.pool.execute{ conn in
             try conn.query("SELECT * FROM todos ORDER BY updated_at DESC LIMIT ?", [limit])
         }
