@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		522661B01C3931250055E771 /* Kunugi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522661AA1C3931160055E771 /* Kunugi.framework */; };
+		526C14641C490BC600A1ECC5 /* Inquiline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526C145E1C490BB300A1ECC5 /* Inquiline.framework */; };
 		527E48E21C44DF4F002C1732 /* TodoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E48E11C44DF4F002C1732 /* TodoController.swift */; };
 		528A0E421C393843002AFC9A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E411C393843002AFC9A /* Logger.swift */; };
 		528A0E4A1C393898002AFC9A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A0E491C393898002AFC9A /* App.swift */; };
@@ -19,7 +20,6 @@
 		5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299635E1C32B1F2007D30D6 /* Constants.swift */; };
 		529CCF7F1C3F9CBD00084373 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529CCF7A1C3F9C4A00084373 /* MySQL.framework */; };
 		52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */; };
-		52F5F4901C468482008D2B3A /* swiftra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F5F48F1C468477008D2B3A /* swiftra.framework */; };
 		52F5F4961C4692D0008D2B3A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4951C4692D0008D2B3A /* Response.swift */; };
 		52F5F4A01C4696B0008D2B3A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49C1C4696B0008D2B3A /* JSON.swift */; };
 		52F5F4A11C4696B0008D2B3A /* JSONParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */; };
@@ -43,6 +43,20 @@
 			remoteGlobalIDString = 522661611C392E190055E771;
 			remoteInfo = KunugiTests;
 		};
+		526C145D1C490BB300A1ECC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 526C14471C490B9900A1ECC5;
+			remoteInfo = Inquiline;
+		};
+		529650B91C490461004B75F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 529650B51C490461004B75F4 /* Nest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 529650A81C49043B004B75F4;
+			remoteInfo = Nest;
+		};
 		5299632C1C32AFE1007D30D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5299631A1C32AFE1007D30D6 /* Project object */;
@@ -64,17 +78,11 @@
 			remoteGlobalIDString = 529215911BDB8CD6009B031A;
 			remoteInfo = MySQLTests;
 		};
-		52F5F48E1C468477008D2B3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52F5F4851C468477008D2B3A /* swiftra.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 52F5F43E1C4683EE008D2B3A;
-			remoteInfo = swiftra;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		522661A21C3931160055E771 /* Kunugi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kunugi.xcodeproj; path = "../../Kunugi/OSX Projects/Kunugi/Kunugi.xcodeproj"; sourceTree = "<group>"; };
+		526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Inquiline.xcodeproj; path = "../OSX Projects/Inquiline/Inquiline.xcodeproj"; sourceTree = "<group>"; };
 		527E48E11C44DF4F002C1732 /* TodoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoController.swift; sourceTree = "<group>"; };
 		528A0E411C393843002AFC9A /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		528A0E491C393898002AFC9A /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -82,6 +90,7 @@
 		528A0E4D1C39396A002AFC9A /* BodyParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodyParser.swift; sourceTree = "<group>"; };
 		528A0E4F1C393990002AFC9A /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		528A0E531C393A59002AFC9A /* DBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
+		529650B51C490461004B75F4 /* Nest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nest.xcodeproj; path = "../OSX Projects/Nest/Nest.xcodeproj"; sourceTree = "<group>"; };
 		529963211C32AFE1007D30D6 /* todoapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		529963241C32AFE1007D30D6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		529963261C32AFE1007D30D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +99,6 @@
 		5299635E1C32B1F2007D30D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../External/MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
 		52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
-		52F5F4851C468477008D2B3A /* swiftra.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swiftra.xcodeproj; path = "../OSX Projects/swiftra/swiftra.xcodeproj"; sourceTree = "<group>"; };
 		52F5F4951C4692D0008D2B3A /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		52F5F49C1C4696B0008D2B3A /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParseError.swift; sourceTree = "<group>"; };
@@ -104,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F5F4901C468482008D2B3A /* swiftra.framework in Frameworks */,
+				526C14641C490BC600A1ECC5 /* Inquiline.framework in Frameworks */,
 				529CCF7F1C3F9CBD00084373 /* MySQL.framework in Frameworks */,
 				522661B01C3931250055E771 /* Kunugi.framework in Frameworks */,
 			);
@@ -125,6 +133,22 @@
 			children = (
 				522661AA1C3931160055E771 /* Kunugi.framework */,
 				522661AC1C3931160055E771 /* KunugiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		526C145A1C490BB300A1ECC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				526C145E1C490BB300A1ECC5 /* Inquiline.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		529650B61C490461004B75F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				529650BA1C490461004B75F4 /* Nest.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,7 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				52F5F49B1C4696B0008D2B3A /* JSON */,
-				52F5F4851C468477008D2B3A /* swiftra.xcodeproj */,
+				526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */,
+				529650B51C490461004B75F4 /* Nest.xcodeproj */,
 				529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */,
 				522661A21C3931160055E771 /* Kunugi.xcodeproj */,
 			);
@@ -192,14 +217,6 @@
 			children = (
 				529CCF7A1C3F9C4A00084373 /* MySQL.framework */,
 				529CCF7C1C3F9C4A00084373 /* MySQLTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		52F5F4861C468477008D2B3A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				52F5F48F1C468477008D2B3A /* swiftra.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +301,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 526C145A1C490BB300A1ECC5 /* Products */;
+					ProjectRef = 526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */;
+				},
+				{
 					ProductGroup = 522661A31C3931160055E771 /* Products */;
 					ProjectRef = 522661A21C3931160055E771 /* Kunugi.xcodeproj */;
 				},
@@ -292,8 +313,8 @@
 					ProjectRef = 529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */;
 				},
 				{
-					ProductGroup = 52F5F4861C468477008D2B3A /* Products */;
-					ProjectRef = 52F5F4851C468477008D2B3A /* swiftra.xcodeproj */;
+					ProductGroup = 529650B61C490461004B75F4 /* Products */;
+					ProjectRef = 529650B51C490461004B75F4 /* Nest.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -319,6 +340,20 @@
 			remoteRef = 522661AB1C3931160055E771 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		526C145E1C490BB300A1ECC5 /* Inquiline.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Inquiline.framework;
+			remoteRef = 526C145D1C490BB300A1ECC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		529650BA1C490461004B75F4 /* Nest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Nest.framework;
+			remoteRef = 529650B91C490461004B75F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		529CCF7A1C3F9C4A00084373 /* MySQL.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -331,13 +366,6 @@
 			fileType = wrapper.cfbundle;
 			path = MySQLTests.xctest;
 			remoteRef = 529CCF7B1C3F9C4A00084373 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		52F5F48F1C468477008D2B3A /* swiftra.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = swiftra.framework;
-			remoteRef = 52F5F48E1C468477008D2B3A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

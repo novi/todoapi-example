@@ -6,12 +6,19 @@
 //  Copyright © 2016 Yusuke Ito. All rights reserved.
 //
 
-import swiftra
+import Nest
+import Inquiline
 
 extension Response {
-    init(status: Status, headers: [String: String] = [:], json: JSON) {
-        var headers = headers
-        headers["Content-Type"] = "application/json"
-        self.init(status: status, headers: headers, body: DefaultJSONSerializer().serialize(json))
+    init(status: Status, json: JSON, headers: [(String, String)] = []) {
+        self.init(status, headers: headers, contentType: "application/json", body: DefaultJSONSerializer().serialize(json))
+    }
+    
+    init(status: Status, body: String, headers: [(String, String)] = []) {
+        self.init(status, headers: headers, contentType: "text/plain", body: body)
+    }
+    
+    init(_ body: String) {
+        self.init(status: .Ok, body: body)
     }
 }

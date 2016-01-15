@@ -7,7 +7,7 @@
 //
 
 import Kunugi
-import swiftra
+import Nest
 import Foundation
 
 struct MethodOverride: MiddlewareType, AnyRequestHandleable {
@@ -17,9 +17,9 @@ struct MethodOverride: MiddlewareType, AnyRequestHandleable {
     }
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
-        if let override = ctx.request.headers[key], let newMethod = Method(rawValue: override.uppercaseString) {
+        if let val = ctx.request[key], let newMethod = Method(rawValue: val.uppercaseString) {
             ctx.method = newMethod
-        }
+        }        
         return .Next
     }
 }

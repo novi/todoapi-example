@@ -18,8 +18,8 @@ struct BodyParser: MiddlewareType, AnyRequestHandleable {
     func handle(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
         let parsed: JSON
-        if ctx.request.body.count > 0 {
-            parsed = (try? JSONParser.parse(ctx.request.body)) ?? empty
+        if let bodyStr = ctx.request.body where bodyStr.characters.count > 0 {
+            parsed = (try? JSONParser.parse(bodyStr)) ?? empty
         } else {
             parsed = empty
         }

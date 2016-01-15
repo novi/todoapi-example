@@ -7,7 +7,8 @@
 //
 
 import Kunugi
-import swiftra
+import Nest
+import Inquiline
 import MySQL
 
 struct PrivateController: ControllerMiddleware, AnyRequestHandleable {

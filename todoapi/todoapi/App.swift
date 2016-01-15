@@ -6,16 +6,17 @@
 //  Copyright © 2016 Yusuke Ito. All rights reserved.
 //
 
-import swiftra
+import Nest
 import Kunugi
+import Inquiline
 import MySQL
 
 class Context: ContextBox {
     var context: [ContextType] = []
     var request: Request
     let pool: ConnectionPool
-    init(request: Request, pool: ConnectionPool) {
-        self.request = request
+    init(request: RequestType, pool: ConnectionPool) {
+        self.request = Request(method: request.method, path: request.path, headers: request.headers, body: request.body)
         self.pool = pool
         self.path = request.path
         self.method = Kunugi.Method(rawValue: request.method) ?? Kunugi.Method.OPTIONS
@@ -44,7 +45,7 @@ class App: AppType {
         middleware.append(m)
     }
     
-    func createContext(request: Request) throws -> ContextBox {
+    func createContext(request: RequestType) throws -> ContextBox {
         return Context(request: request, pool: pool)
     }
     
@@ -52,7 +53,7 @@ class App: AppType {
         print("internal server error: \(e)")
     }
     
-    var dispatcher: (Request -> Response) {
+    var application: Application {
         return { request in
             let handler = self.handler
             do {

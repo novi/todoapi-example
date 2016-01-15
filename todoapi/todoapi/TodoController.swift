@@ -7,7 +7,8 @@
 //
 
 import Kunugi
-import swiftra
+import Nest
+import Inquiline
 import MySQL
 
 struct RequestParameterId: ContextType {
@@ -30,7 +31,7 @@ struct TodoController: ControllerMiddleware, AnyRequestHandleable {
             try conn.query("SELECT * FROM todos WHERE id = ?", [id])
         }
         if let first = todos.first {
-            return .Respond( Response(status: .OK, json: first.json) )
+            return .Respond( Response(status: .Ok, json: first.json) )
         } else {
             return .Respond( Response(.NotFound))
         }
@@ -44,7 +45,7 @@ struct TodoController: ControllerMiddleware, AnyRequestHandleable {
         if status.affectedRows == 0 {
             return .Respond( Response(.NotFound))
         } else {
-            return .Respond( Response(.OK))
+            return .Respond( Response(.Ok))
         }
     }
     func put(ctx: ContextBox) throws -> MiddlewareResult {
@@ -83,7 +84,7 @@ struct TodoListController: ControllerMiddleware, AnyRequestHandleable {
         let json: JSON = [
             "todos": JSON.from(todos.map({ $0.json }))
         ]
-        return .Respond( Response(status: .OK, json: json))
+        return .Respond( Response(status: .Ok, json: json))
     }
     func post(ctx: ContextBox) throws -> MiddlewareResult {
         let ctx = ctx as! Context
