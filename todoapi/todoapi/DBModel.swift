@@ -7,7 +7,6 @@
 //
 
 import MySQL
-import Core
 
 extension ConnectionPool {
     func createTodoTable() throws {
