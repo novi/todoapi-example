@@ -1,7 +1,7 @@
 
 import MySQL
-import HTTP
-import Epoch
+import Nest
+import Inquiline
 import Kunugi
 
 // Provide DB options as following in Constants.swift
@@ -35,7 +35,7 @@ app.use( Route("/todo/:id", TodoController()) )
 
 app.prepare()
 
-let server = Server(port: 3000, responder: app.responder)
+
 print("listening...")
-server.start()
+serve(3000, app: app.application)
 

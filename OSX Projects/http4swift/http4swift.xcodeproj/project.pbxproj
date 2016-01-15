@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		526C14731C4911F500A1ECC5 /* http4swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 526C14721C4911F500A1ECC5 /* http4swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		526C14811C49120A00A1ECC5 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C147B1C49120A00A1ECC5 /* HTTPRequest.swift */; };
+		526C14821C49120A00A1ECC5 /* HTTPResponseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C147C1C49120A00A1ECC5 /* HTTPResponseWriter.swift */; };
+		526C14831C49120A00A1ECC5 /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C147D1C49120A00A1ECC5 /* HTTPServer.swift */; };
+		526C14841C49120A00A1ECC5 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C147E1C49120A00A1ECC5 /* Reader.swift */; };
+		526C14851C49120A00A1ECC5 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C147F1C49120A00A1ECC5 /* Socket.swift */; };
+		526C14861C49120A00A1ECC5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C14801C49120A00A1ECC5 /* String.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		526C146F1C4911F500A1ECC5 /* http4swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = http4swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		526C14721C4911F500A1ECC5 /* http4swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http4swift.h; sourceTree = "<group>"; };
+		526C14741C4911F500A1ECC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		526C147B1C49120A00A1ECC5 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		526C147C1C49120A00A1ECC5 /* HTTPResponseWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseWriter.swift; sourceTree = "<group>"; };
+		526C147D1C49120A00A1ECC5 /* HTTPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
+		526C147E1C49120A00A1ECC5 /* Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		526C147F1C49120A00A1ECC5 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		526C14801C49120A00A1ECC5 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		526C146B1C4911F500A1ECC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		526C14651C4911F500A1ECC5 = {
+			isa = PBXGroup;
+			children = (
+				526C14711C4911F500A1ECC5 /* http4swift */,
+				526C14701C4911F500A1ECC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		526C14701C4911F500A1ECC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				526C146F1C4911F500A1ECC5 /* http4swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		526C14711C4911F500A1ECC5 /* http4swift */ = {
+			isa = PBXGroup;
+			children = (
+				526C147A1C49120A00A1ECC5 /* Sources */,
+				526C14721C4911F500A1ECC5 /* http4swift.h */,
+				526C14741C4911F500A1ECC5 /* Info.plist */,
+			);
+			path = http4swift;
+			sourceTree = "<group>";
+		};
+		526C147A1C49120A00A1ECC5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				526C147B1C49120A00A1ECC5 /* HTTPRequest.swift */,
+				526C147C1C49120A00A1ECC5 /* HTTPResponseWriter.swift */,
+				526C147D1C49120A00A1ECC5 /* HTTPServer.swift */,
+				526C147E1C49120A00A1ECC5 /* Reader.swift */,
+				526C147F1C49120A00A1ECC5 /* Socket.swift */,
+				526C14801C49120A00A1ECC5 /* String.swift */,
+			);
+			name = Sources;
+			path = ../../../External/http4swift/Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		526C146C1C4911F500A1ECC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526C14731C4911F500A1ECC5 /* http4swift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		526C146E1C4911F500A1ECC5 /* http4swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 526C14771C4911F500A1ECC5 /* Build configuration list for PBXNativeTarget "http4swift" */;
+			buildPhases = (
+				526C146A1C4911F500A1ECC5 /* Sources */,
+				526C146B1C4911F500A1ECC5 /* Frameworks */,
+				526C146C1C4911F500A1ECC5 /* Headers */,
+				526C146D1C4911F500A1ECC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = http4swift;
+			productName = http4swift;
+			productReference = 526C146F1C4911F500A1ECC5 /* http4swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		526C14661C4911F500A1ECC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Yusuke Ito";
+				TargetAttributes = {
+					526C146E1C4911F500A1ECC5 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 526C14691C4911F500A1ECC5 /* Build configuration list for PBXProject "http4swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 526C14651C4911F500A1ECC5;
+			productRefGroup = 526C14701C4911F500A1ECC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				526C146E1C4911F500A1ECC5 /* http4swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		526C146D1C4911F500A1ECC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		526C146A1C4911F500A1ECC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				526C14861C49120A00A1ECC5 /* String.swift in Sources */,
+				526C14811C49120A00A1ECC5 /* HTTPRequest.swift in Sources */,
+				526C14821C49120A00A1ECC5 /* HTTPResponseWriter.swift in Sources */,
+				526C14851C49120A00A1ECC5 /* Socket.swift in Sources */,
+				526C14841C49120A00A1ECC5 /* Reader.swift in Sources */,
+				526C14831C49120A00A1ECC5 /* HTTPServer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		526C14751C4911F500A1ECC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		526C14761C4911F500A1ECC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		526C14781C4911F500A1ECC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = http4swift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.http4swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		526C14791C4911F500A1ECC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = http4swift/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.http4swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		526C14691C4911F500A1ECC5 /* Build configuration list for PBXProject "http4swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526C14751C4911F500A1ECC5 /* Debug */,
+				526C14761C4911F500A1ECC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		526C14771C4911F500A1ECC5 /* Build configuration list for PBXNativeTarget "http4swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				526C14781C4911F500A1ECC5 /* Debug */,
+				526C14791C4911F500A1ECC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 526C14661C4911F500A1ECC5 /* Project object */;
+}
