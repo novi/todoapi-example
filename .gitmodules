@@ -10,3 +10,6 @@
 [submodule "External/Nest"]
 	path = External/Nest
 	url = https://github.com/nestproject/Nest.git
+[submodule "External/Inquiline"]
+	path = External/Inquiline
+	url = https://github.com/nestproject/Inquiline.git

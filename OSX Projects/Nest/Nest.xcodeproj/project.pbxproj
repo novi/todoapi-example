@@ -7,29 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52F5F4671C46841E008D2B3A /* http4swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F5F4661C46841E008D2B3A /* http4swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52F5F4741C46842A008D2B3A /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F46E1C46842A008D2B3A /* HTTPRequest.swift */; };
-		52F5F4751C46842A008D2B3A /* HTTPResponseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F46F1C46842A008D2B3A /* HTTPResponseWriter.swift */; };
-		52F5F4761C46842A008D2B3A /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4701C46842A008D2B3A /* HTTPServer.swift */; };
-		52F5F4771C46842A008D2B3A /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4711C46842A008D2B3A /* Reader.swift */; };
-		52F5F4781C46842A008D2B3A /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4721C46842A008D2B3A /* Socket.swift */; };
-		52F5F4791C46842A008D2B3A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4731C46842A008D2B3A /* String.swift */; };
+		529650AC1C49043B004B75F4 /* Nest.h in Headers */ = {isa = PBXBuildFile; fileRef = 529650AB1C49043B004B75F4 /* Nest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		529650B41C490448004B75F4 /* Nest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529650B31C490448004B75F4 /* Nest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52F5F4631C46841E008D2B3A /* http4swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = http4swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52F5F4661C46841E008D2B3A /* http4swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http4swift.h; sourceTree = "<group>"; };
-		52F5F4681C46841E008D2B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52F5F46E1C46842A008D2B3A /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequest.swift; path = ../../../External/http4swift/Sources/HTTPRequest.swift; sourceTree = "<group>"; };
-		52F5F46F1C46842A008D2B3A /* HTTPResponseWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponseWriter.swift; path = ../../../External/http4swift/Sources/HTTPResponseWriter.swift; sourceTree = "<group>"; };
-		52F5F4701C46842A008D2B3A /* HTTPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPServer.swift; path = ../../../External/http4swift/Sources/HTTPServer.swift; sourceTree = "<group>"; };
-		52F5F4711C46842A008D2B3A /* Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reader.swift; path = ../../../External/http4swift/Sources/Reader.swift; sourceTree = "<group>"; };
-		52F5F4721C46842A008D2B3A /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Socket.swift; path = ../../../External/http4swift/Sources/Socket.swift; sourceTree = "<group>"; };
-		52F5F4731C46842A008D2B3A /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../../External/http4swift/Sources/String.swift; sourceTree = "<group>"; };
+		529650A81C49043B004B75F4 /* Nest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		529650AB1C49043B004B75F4 /* Nest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nest.h; sourceTree = "<group>"; };
+		529650AD1C49043B004B75F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529650B31C490448004B75F4 /* Nest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Nest.swift; path = ../../../External/Nest/Sources/Nest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		52F5F45F1C46841E008D2B3A /* Frameworks */ = {
+		529650A41C49043B004B75F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,102 +29,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52F5F4591C46841E008D2B3A = {
+		5296509E1C49043B004B75F4 = {
 			isa = PBXGroup;
 			children = (
-				52F5F4651C46841E008D2B3A /* http4swift */,
-				52F5F4641C46841E008D2B3A /* Products */,
+				529650AA1C49043B004B75F4 /* Nest */,
+				529650A91C49043B004B75F4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		52F5F4641C46841E008D2B3A /* Products */ = {
+		529650A91C49043B004B75F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52F5F4631C46841E008D2B3A /* http4swift.framework */,
+				529650A81C49043B004B75F4 /* Nest.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52F5F4651C46841E008D2B3A /* http4swift */ = {
+		529650AA1C49043B004B75F4 /* Nest */ = {
 			isa = PBXGroup;
 			children = (
-				52F5F46E1C46842A008D2B3A /* HTTPRequest.swift */,
-				52F5F46F1C46842A008D2B3A /* HTTPResponseWriter.swift */,
-				52F5F4701C46842A008D2B3A /* HTTPServer.swift */,
-				52F5F4711C46842A008D2B3A /* Reader.swift */,
-				52F5F4721C46842A008D2B3A /* Socket.swift */,
-				52F5F4731C46842A008D2B3A /* String.swift */,
-				52F5F4661C46841E008D2B3A /* http4swift.h */,
-				52F5F4681C46841E008D2B3A /* Info.plist */,
+				529650B31C490448004B75F4 /* Nest.swift */,
+				529650AB1C49043B004B75F4 /* Nest.h */,
+				529650AD1C49043B004B75F4 /* Info.plist */,
 			);
-			path = http4swift;
+			path = Nest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		52F5F4601C46841E008D2B3A /* Headers */ = {
+		529650A51C49043B004B75F4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F5F4671C46841E008D2B3A /* http4swift.h in Headers */,
+				529650AC1C49043B004B75F4 /* Nest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		52F5F4621C46841E008D2B3A /* http4swift */ = {
+		529650A71C49043B004B75F4 /* Nest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52F5F46B1C46841E008D2B3A /* Build configuration list for PBXNativeTarget "http4swift" */;
+			buildConfigurationList = 529650B01C49043B004B75F4 /* Build configuration list for PBXNativeTarget "Nest" */;
 			buildPhases = (
-				52F5F45E1C46841E008D2B3A /* Sources */,
-				52F5F45F1C46841E008D2B3A /* Frameworks */,
-				52F5F4601C46841E008D2B3A /* Headers */,
-				52F5F4611C46841E008D2B3A /* Resources */,
+				529650A31C49043B004B75F4 /* Sources */,
+				529650A41C49043B004B75F4 /* Frameworks */,
+				529650A51C49043B004B75F4 /* Headers */,
+				529650A61C49043B004B75F4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = http4swift;
-			productName = http4swift;
-			productReference = 52F5F4631C46841E008D2B3A /* http4swift.framework */;
+			name = Nest;
+			productName = Nest;
+			productReference = 529650A81C49043B004B75F4 /* Nest.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		52F5F45A1C46841E008D2B3A /* Project object */ = {
+		5296509F1C49043B004B75F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Yusuke Ito";
 				TargetAttributes = {
-					52F5F4621C46841E008D2B3A = {
+					529650A71C49043B004B75F4 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
-			buildConfigurationList = 52F5F45D1C46841E008D2B3A /* Build configuration list for PBXProject "http4swift" */;
+			buildConfigurationList = 529650A21C49043B004B75F4 /* Build configuration list for PBXProject "Nest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 52F5F4591C46841E008D2B3A;
-			productRefGroup = 52F5F4641C46841E008D2B3A /* Products */;
+			mainGroup = 5296509E1C49043B004B75F4;
+			productRefGroup = 529650A91C49043B004B75F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52F5F4621C46841E008D2B3A /* http4swift */,
+				529650A71C49043B004B75F4 /* Nest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		52F5F4611C46841E008D2B3A /* Resources */ = {
+		529650A61C49043B004B75F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,23 +129,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		52F5F45E1C46841E008D2B3A /* Sources */ = {
+		529650A31C49043B004B75F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F5F4791C46842A008D2B3A /* String.swift in Sources */,
-				52F5F4741C46842A008D2B3A /* HTTPRequest.swift in Sources */,
-				52F5F4751C46842A008D2B3A /* HTTPResponseWriter.swift in Sources */,
-				52F5F4781C46842A008D2B3A /* Socket.swift in Sources */,
-				52F5F4771C46842A008D2B3A /* Reader.swift in Sources */,
-				52F5F4761C46842A008D2B3A /* HTTPServer.swift in Sources */,
+				529650B41C490448004B75F4 /* Nest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		52F5F4691C46841E008D2B3A /* Debug */ = {
+		529650AE1C49043B004B75F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,7 +187,7 @@
 			};
 			name = Debug;
 		};
-		52F5F46A1C46841E008D2B3A /* Release */ = {
+		529650AF1C49043B004B75F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,7 +226,7 @@
 			};
 			name = Release;
 		};
-		52F5F46C1C46841E008D2B3A /* Debug */ = {
+		529650B11C49043B004B75F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -256,17 +236,17 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = http4swift/Info.plist;
+				INFOPLIST_FILE = Nest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.http4swift;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.Nest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		52F5F46D1C46841E008D2B3A /* Release */ = {
+		529650B21C49043B004B75F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -276,10 +256,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = http4swift/Info.plist;
+				INFOPLIST_FILE = Nest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.http4swift;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.Nest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -288,24 +268,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52F5F45D1C46841E008D2B3A /* Build configuration list for PBXProject "http4swift" */ = {
+		529650A21C49043B004B75F4 /* Build configuration list for PBXProject "Nest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52F5F4691C46841E008D2B3A /* Debug */,
-				52F5F46A1C46841E008D2B3A /* Release */,
+				529650AE1C49043B004B75F4 /* Debug */,
+				529650AF1C49043B004B75F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52F5F46B1C46841E008D2B3A /* Build configuration list for PBXNativeTarget "http4swift" */ = {
+		529650B01C49043B004B75F4 /* Build configuration list for PBXNativeTarget "Nest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				52F5F46C1C46841E008D2B3A /* Debug */,
-				52F5F46D1C46841E008D2B3A /* Release */,
+				529650B11C49043B004B75F4 /* Debug */,
+				529650B21C49043B004B75F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 52F5F45A1C46841E008D2B3A /* Project object */;
+	rootObject = 5296509F1C49043B004B75F4 /* Project object */;
 }

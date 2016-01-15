@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:http4swift.xcodeproj">
+      location = "self:Nest.xcodeproj">
    </FileRef>
 </Workspace>
