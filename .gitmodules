@@ -7,3 +7,6 @@
 [submodule "External/JSON"]
 	path = External/JSON
 	url = https://github.com/Zewo/JSON.git
+[submodule "External/Nest"]
+	path = External/Nest
+	url = https://github.com/nestproject/Nest.git
