@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524A38881C4D321A00BF0691 /* Nest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524A38871C4D321A00BF0691 /* Nest.framework */; };
 		526C144B1C490B9900A1ECC5 /* Inquiline.h in Headers */ = {isa = PBXBuildFile; fileRef = 526C144A1C490B9900A1ECC5 /* Inquiline.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		526C14561C490BA200A1ECC5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C14531C490BA200A1ECC5 /* Request.swift */; };
 		526C14571C490BA200A1ECC5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C14541C490BA200A1ECC5 /* Response.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		524A38871C4D321A00BF0691 /* Nest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nest.framework; path = "../../../../Library/Developer/Xcode/DerivedData/todoapi-feqntgppnjcaetbykvmchykvzqnb/Build/Products/Debug/Nest.framework"; sourceTree = "<group>"; };
 		526C14471C490B9900A1ECC5 /* Inquiline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inquiline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		526C144A1C490B9900A1ECC5 /* Inquiline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inquiline.h; sourceTree = "<group>"; };
 		526C144C1C490B9900A1ECC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524A38881C4D321A00BF0691 /* Nest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +39,7 @@
 		526C143D1C490B9900A1ECC5 = {
 			isa = PBXGroup;
 			children = (
+				524A38871C4D321A00BF0691 /* Nest.framework */,
 				526C14491C490B9900A1ECC5 /* Inquiline */,
 				526C14481C490B9900A1ECC5 /* Products */,
 			);
@@ -298,6 +302,7 @@
 				526C14511C490B9900A1ECC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
