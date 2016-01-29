@@ -13,8 +13,8 @@ struct Row {
     struct MathResult: QueryRowResultType {
         let val: Int
         static func decodeRow(r: MySQL.QueryRowResult) throws -> MathResult {
-            return try build(MathResult.init)(
-                r <| 0
+            return try MathResult(
+                val: r <| 0
             )
         }
     }
@@ -26,11 +26,11 @@ struct Row {
         let done: Bool
         let updatedAt: SQLDate
         static func decodeRow(r: MySQL.QueryRowResult) throws -> Todo {
-            return try build(Todo.init)(
-                r <| "id",
-                r <| "title",
-                r <| "done",
-                r <| "updated_at"
+            return try Todo(
+                id: r <| "id",
+                title: r <| "title",
+                done: r <| "done",
+                updatedAt: r <| "updated_at"
             )
         }
         func queryParameter() throws -> QueryDictionary {
