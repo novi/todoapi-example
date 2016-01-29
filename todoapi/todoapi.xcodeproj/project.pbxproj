@@ -22,12 +22,9 @@
 		529963251C32AFE1007D30D6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529963241C32AFE1007D30D6 /* main.swift */; };
 		5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5299635E1C32B1F2007D30D6 /* Constants.swift */; };
 		529CCF7F1C3F9CBD00084373 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529CCF7A1C3F9C4A00084373 /* MySQL.framework */; };
+		52A69DF21C5B4E8B001DA581 /* JSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A69DEB1C5B4E84001DA581 /* JSON.framework */; };
 		52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */; };
 		52F5F4961C4692D0008D2B3A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4951C4692D0008D2B3A /* Response.swift */; };
-		52F5F4A01C4696B0008D2B3A /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49C1C4696B0008D2B3A /* JSON.swift */; };
-		52F5F4A11C4696B0008D2B3A /* JSONParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */; };
-		52F5F4A21C4696B0008D2B3A /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49E1C4696B0008D2B3A /* JSONParser.swift */; };
-		52F5F4A31C4696B0008D2B3A /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F49F1C4696B0008D2B3A /* JSONSerializer.swift */; };
 		52F5F4B41C47DE04008D2B3A /* MethodOverride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5F4B31C47DE04008D2B3A /* MethodOverride.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +92,13 @@
 			remoteGlobalIDString = 529215911BDB8CD6009B031A;
 			remoteInfo = MySQLTests;
 		};
+		52A69DEA1C5B4E84001DA581 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52A69DE41C5B4E84001DA581 /* JSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52A69DCB1C5B4E62001DA581;
+			remoteInfo = JSON;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -118,12 +122,9 @@
 		5299632F1C32AFE1007D30D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5299635E1C32B1F2007D30D6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../External/MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
+		52A69DE41C5B4E84001DA581 /* JSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSON.xcodeproj; path = "../OSX Projects/JSON/JSON.xcodeproj"; sourceTree = "<group>"; };
 		52B9D52E1C3FBC9B007638AB /* ResponseHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHeader.swift; sourceTree = "<group>"; };
 		52F5F4951C4692D0008D2B3A /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		52F5F49C1C4696B0008D2B3A /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParseError.swift; sourceTree = "<group>"; };
-		52F5F49E1C4696B0008D2B3A /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
-		52F5F49F1C4696B0008D2B3A /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
 		52F5F4B31C47DE04008D2B3A /* MethodOverride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodOverride.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A69DF21C5B4E8B001DA581 /* JSON.framework in Frameworks */,
 				525595791C4916C8003F4FEF /* URI.framework in Frameworks */,
 				526C148D1C49122100A1ECC5 /* http4swift.framework in Frameworks */,
 				526C14641C490BC600A1ECC5 /* Inquiline.framework in Frameworks */,
@@ -242,9 +244,9 @@
 		529963381C32B088007D30D6 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				52A69DE41C5B4E84001DA581 /* JSON.xcodeproj */,
 				5255956C1C4916BF003F4FEF /* URI.xcodeproj */,
 				526C14871C49121A00A1ECC5 /* http4swift.xcodeproj */,
-				52F5F49B1C4696B0008D2B3A /* JSON */,
 				526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */,
 				529650B51C490461004B75F4 /* Nest.xcodeproj */,
 				529CCF741C3F9C4A00084373 /* MySQL.xcodeproj */,
@@ -262,16 +264,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52F5F49B1C4696B0008D2B3A /* JSON */ = {
+		52A69DE51C5B4E84001DA581 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52F5F49C1C4696B0008D2B3A /* JSON.swift */,
-				52F5F49D1C4696B0008D2B3A /* JSONParseError.swift */,
-				52F5F49E1C4696B0008D2B3A /* JSONParser.swift */,
-				52F5F49F1C4696B0008D2B3A /* JSONSerializer.swift */,
+				52A69DEB1C5B4E84001DA581 /* JSON.framework */,
 			);
-			name = JSON;
-			path = ../External/JSON/Sources;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +346,10 @@
 				{
 					ProductGroup = 526C145A1C490BB300A1ECC5 /* Products */;
 					ProjectRef = 526C14591C490BB300A1ECC5 /* Inquiline.xcodeproj */;
+				},
+				{
+					ProductGroup = 52A69DE51C5B4E84001DA581 /* Products */;
+					ProjectRef = 52A69DE41C5B4E84001DA581 /* JSON.xcodeproj */;
 				},
 				{
 					ProductGroup = 522661A31C3931160055E771 /* Products */;
@@ -431,6 +433,13 @@
 			remoteRef = 529CCF7B1C3F9C4A00084373 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		52A69DEB1C5B4E84001DA581 /* JSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = JSON.framework;
+			remoteRef = 52A69DEA1C5B4E84001DA581 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -451,17 +460,13 @@
 				52F5F4B41C47DE04008D2B3A /* MethodOverride.swift in Sources */,
 				529963251C32AFE1007D30D6 /* main.swift in Sources */,
 				528A0E4C1C3938BB002AFC9A /* Controllers.swift in Sources */,
-				52F5F4A21C4696B0008D2B3A /* JSONParser.swift in Sources */,
 				528A0E4A1C393898002AFC9A /* App.swift in Sources */,
-				52F5F4A01C4696B0008D2B3A /* JSON.swift in Sources */,
 				528A0E421C393843002AFC9A /* Logger.swift in Sources */,
 				528A0E501C393990002AFC9A /* Auth.swift in Sources */,
 				528A0E4E1C39396A002AFC9A /* BodyParser.swift in Sources */,
 				5299635F1C32B1F2007D30D6 /* Constants.swift in Sources */,
 				52F5F4961C4692D0008D2B3A /* Response.swift in Sources */,
-				52F5F4A31C4696B0008D2B3A /* JSONSerializer.swift in Sources */,
 				52B9D52F1C3FBC9B007638AB /* ResponseHeader.swift in Sources */,
-				52F5F4A11C4696B0008D2B3A /* JSONParseError.swift in Sources */,
 				526C148F1C49123500A1ECC5 /* Server.swift in Sources */,
 				528A0E541C393A59002AFC9A /* DBModel.swift in Sources */,
 				527E48E21C44DF4F002C1732 /* TodoController.swift in Sources */,
