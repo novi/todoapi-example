@@ -10,6 +10,7 @@ import Kunugi
 import Nest
 import Inquiline
 import MySQL
+import JSON
 
 struct RequestParameterId: ContextType {
     let id: Int

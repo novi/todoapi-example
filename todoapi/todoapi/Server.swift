@@ -14,7 +14,7 @@ extension HTTPRequest {
     var bodyString: String {
         var buffer = body
         buffer.append(CChar(0))
-        return String(buffer) ?? ""
+        return String.fromCString(buffer) ?? "" // String(buffer) ?? ""
     }
 }
 

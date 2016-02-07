@@ -8,6 +8,7 @@
 
 import Nest
 import Inquiline
+import JSON
 
 extension Response {
     init(status: Status, json: JSON, headers: [(String, String)] = []) {
