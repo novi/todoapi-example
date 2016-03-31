@@ -1,21 +1,3 @@
-[submodule "External/http4swift"]
-	path = External/http4swift
-	url = https://github.com/takebayashi/http4swift.git
 [submodule "External/swiftra"]
 	path = External/swiftra
 	url = https://github.com/takebayashi/swiftra.git
-[submodule "External/JSON"]
-	path = External/JSON
-	url = https://github.com/Zewo/JSON.git
-[submodule "External/Nest"]
-	path = External/Nest
-	url = https://github.com/nestproject/Nest.git
-[submodule "External/Inquiline"]
-	path = External/Inquiline
-	url = https://github.com/nestproject/Inquiline.git
-[submodule "External/URI"]
-	path = External/URI
-	url = https://github.com/Zewo/URI.git
-[submodule "External/CURIParser"]
-	path = External/CURIParser
-	url = https://github.com/Zewo/CURIParser.git
